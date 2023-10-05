@@ -7,22 +7,24 @@ import numpy as np
 import pandas as pd
 import scipy.stats
 from sklearn.metrics import accuracy_score, f1_score, classification_report
-
+import math
 WESAD_SUBJECTS = list(itertools.chain(range(2, 12), range(13, 18)))
 
 
 def datasets_metrics():
     results = []
-
-    for dataset in ["WESAD_5_fold", "DECAF_5_fold", "ASCERTAIN_5_fold", "Amigos_5_fold"]:
+    #for dataset in ["WESAD_5_fold", "DECAF_5_fold", "ASCERTAIN_5_fold", "Amigos_5_fold"]:
+    for dataset in ["WESAD_5_fold"]:
         setups = [f"it_{it:02d}" for it in range(5)]
         add_baseline(dataset, results)
 
-        for architecture in ['mcdcnnM', 'cnnM', 'stresnetM', 'mlpM', 'fcnM', 'encoderM', 'resnetM', 'inceptionM',
-                             'mlpLstmM', 'cnnLstmM']:
+        #for architecture in ['mcdcnnM', 'cnnM', 'stresnetM', 'mlpM', 'fcnM', 'encoderM', 'resnetM', 'inceptionM',
+                             #'mlpLstmM', 'cnnLstmM']:
+        for architecture in ['fcnM']:
             for eval_i in range(10):
+                #print(get_result(architecture, dataset, eval_i, setups))
                 results += get_result(architecture, dataset, eval_i, setups)
-
+    
     return pd.DataFrame(results,
                         columns=["Dataset", "Architecture", "Fold", "Evaluation", "Loss", "Loss (std)", "Accuracy",
                                  "Accuracy (std)", "F1", "F1 (std)", "AUC", "AUC (std)", "Duration",
@@ -88,7 +90,7 @@ def get_result(architecture, dataset, eval_i, setups):
 
 def paths_with_results_generator(architecture, dataset, eval_i, fold_i, folds_n, setups):
     for setup in setups:
-        yield f"results/{dataset}_{folds_n}fold_{fold_i:02d}/tune_{eval_i:02d}/{architecture}/{setup}/"
+        yield f"results_snr_0.5/{dataset}_{folds_n}fold_{fold_i:02d}/tune_{eval_i:02d}/{architecture}/{setup}/"
 
 
 def count_classes_representation():

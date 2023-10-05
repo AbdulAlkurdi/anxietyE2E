@@ -18,7 +18,7 @@ from multimodal_classfiers.mcdcnn import ClassifierMcdcnn
 from multimodal_classfiers.mlp import ClassifierMlp
 from multimodal_classfiers.mlp_lstm import ClassifierMlpLstm
 from multimodal_classfiers.resnet import ClassifierResnet
-from multimodal_classfiers.stresnet import ClassifierStresnet
+#from multimodal_classfiers.stresnet import ClassifierStresnet
 from multimodal_classfiers.time_cnn import ClassifierTimeCnn
 from utils.utils import get_new_session, prepare_data
 
@@ -55,11 +55,11 @@ def create_classifier(classifier_name, input_shapes, nb_classes, output_director
         depth = hyperparameters.depth if hyperparameters and hyperparameters.depth else 6
         return ClassifierInception(output_directory, input_shapes, nb_classes, depth=depth, verbose=verbose,
                                    hyperparameters=hyperparameters, model_init=model_init)
-    if classifier_name == 'stresnetM':
-        return ClassifierStresnet(output_directory, input_shapes, sampling_rates,
-                                  ndft_arr, nb_classes, verbose=verbose,
-                                  hyperparameters=hyperparameters,
-                                  model_init=model_init)
+    #if classifier_name == 'stresnetM':
+        #return ClassifierStresnet(output_directory, input_shapes, sampling_rates,
+        #                          ndft_arr, nb_classes, verbose=verbose,
+        #                          hyperparameters=hyperparameters,
+        #                          model_init=model_init)
     if classifier_name == 'cnnLstmM':
         return ClassifierCnnLstm(output_directory, input_shapes, nb_classes, hyperparameters=hyperparameters,
                                  model_init=model_init)
@@ -95,7 +95,8 @@ class Experiment(ABC):
         self.logger_obj = logger
         self.experimental_setups = None
         self.no_channels = no_channels
-        self.experiment_path = f"results/{self.dataset_name}{dataset_name_suffix}"
+	# Change this line
+        self.experiment_path = f"results_snr_0.5/{self.dataset_name}{dataset_name_suffix}"
 
         self.prepare_experimental_setups()
 
@@ -120,7 +121,7 @@ class Experiment(ABC):
                         os.makedirs(output_directory, exist_ok=True)
 
                         try:
-                            session.run(tf.global_variables_initializer())
+                            session.run(tf.compat.v1.global_variables_initializer())
                             model_init = self.perform_single_experiment(classifier_name, output_directory, setup,
                                                                         iteration, hyperparameters, model_init)
                         except Timeout:
@@ -165,7 +166,8 @@ class Experiment(ABC):
 
 
 def get_experimental_setup(logger_obj, channels_ids, test_ids, train_ids, val_ids, name, dataset_name):
-    path = "archives/mts_archive/"
+    #Change this line
+    path = "mts_archives_snr_0.5/"
     dataset = Dataset(dataset_name, None, logger_obj)
     x_test, y_test, sampling_test = dataset.load(path, test_ids, channels_ids)
     x_val, y_val, sampling_val = dataset.load(path, val_ids, channels_ids)
