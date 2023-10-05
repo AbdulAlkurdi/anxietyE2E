@@ -167,6 +167,10 @@ cmake-build-*/
 
 # File-based project format
 *.iws
+*.swb
+
+# job related files
+*.out
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -176,3 +180,8 @@ atlassian-ide-plugin.xml
 
 # Editor-based Rest Client
 .idea/httpRequests
+
+# Data
+Datasets
+mts_archives*
+
