@@ -25,12 +25,6 @@ Check the version of python (the output should be Python 3.8.13)
 python --version
 ```
 
-If you do not have the correct version of Python, run the following commands
-```
-export PATH=/u/<your username>/.conda/envs/TFwesad/bin:$PATH
-export PYTHONPATH=/u/<your username>/.conda/envs/TFwesad/lib/python3.8/site-packages
-```
-
 ## Install additional packages:
 Run the following commands to install neccesary packages
 ```
