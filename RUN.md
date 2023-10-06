@@ -1,4 +1,4 @@
-#Running the First Program
+ #Running the First Program
 this document goes over how to run a program after the environment has been set up.
 
 ## Enter to New Machine
