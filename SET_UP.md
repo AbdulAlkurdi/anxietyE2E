@@ -33,17 +33,3 @@ pip install nvidia-pyindex
 pip install nvidia-tensorflow[horovod]
 pip install git+https://github.com/xflr6/graphviz.git@0.13.2
 ```
-
-## Commands in one block
-Below are the commands listed in one block for a quick setup. This assumes that you have not copied the .yml file and does not include the Python version check. Please fill out the <your username> section of the first command before running.
-
-```
-scp module_environment.yml<your username>@login.delta.ncsa.illinois.edu
-:/u/<your username>
-conda env create -f environment_mod.yml -n TFwesad
-conda activate TFwesad
-pip install git+https://www.github.com/keras-team/keras-contrib.git
-pip install nvidia-pyindex
-pip install nvidia-tensorflow[horovod]
-pip install git+https://github.com/xflr6/graphviz.git@0.13.2
-```
