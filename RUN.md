@@ -27,7 +27,7 @@ if you do not have a directory called anxietyE2E, you will have to clone it from
 Follow the following [Instructions](https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) on how to generate a Personal Access Token.
 Make sure to copy and save the token after you generate it.
 
-now clong the repo
+now clone the repo
 ```
 git clone https://github.com/AbdulAlkurdi/anxietyE2E.git
 ```
