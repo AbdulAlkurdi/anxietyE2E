@@ -12,14 +12,14 @@ scp module_environment.yml<your username>@login.delta.ncsa.illinois.edu
 
 ```
 
-##Build the environment
+## Build the environment
 Run the following commands to create and activate your environment
 ```
 conda env create -f environment_mod.yml -n TFwesad
 conda activate TFwesad
 ```
  
-##Python Version Check
+## Python Version Check
 Check the version of python (the output should be Python 3.8.13)
 ```
 python --version
@@ -31,7 +31,7 @@ export PATH=/u/<your username>/.conda/envs/TFwesad/bin:$PATH
 export PYTHONPATH=/u/<your username>/.conda/envs/TFwesad/lib/python3.8/site-packages
 ```
 
-##Install additional packages:
+## Install additional packages:
 Run the following commands to install neccesary packages
 ```
 pip install git+https://www.github.com/keras-team/keras-contrib.git
@@ -40,7 +40,7 @@ pip install nvidia-tensorflow[horovod]
 pip install git+https://github.com/xflr6/graphviz.git@0.13.2
 ```
 
-##Commands in one block
+## Commands in one block
 Below are the commands listed in one block for a quick setup. This assumes that you have not copied the .yml file and does not include the Python version check. Please fill out the <your username> section of the first command before running.
 
 ```
