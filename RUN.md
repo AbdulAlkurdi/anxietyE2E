@@ -43,5 +43,5 @@ cd anxietyE2E
 ## Run the Program
 Run the following command to run the program
 ```
-python tune_one.py 1 wesad_fold_05_00 cnnM 1
+python tune_one.py 0 wesad_fold_05_00 cnnM 1
 ```
