@@ -59,6 +59,45 @@ In order to view the image, you will need to copy it to your local machine with 
 ``scp <username>@login.delta.ncsa.illinois.edu:<your current filepath>/output.png <directory you want to copy to>``
 
 ## General Instructions 
+Below are the general instructions on how to profile any batch job.
 
-WORK IN PROGRESS
+## Create a Batch job
+Create a .sbatch file that calls the program that you want to run. 
+
+make sure to include the following line
+
+``srun python -m cProfile -o output.pstats <other needed parameters>``
+
+the other parameters needed to run the program will vary by case. Some important parameters will include dataset name, max number of evaluations, classifer name, and visible devices.
+
+### Create a New Environment
+at this point, you must create and enter into a new environment to run the ensuing commands. Run the following commands to do so
+
+``conda create --name profile python=3.9
+conda activate profile
+pip install gprof2dot
+pip install graphviz ``
+
+### Run the Batch Job
+You need to run the batch job to create the output.pstats file needed to generate the image. Run the following command to do so.
+
+`` sbatch --job-name=<name> <batch file name> <classifier> <max eval>``
+
+the list of possible classifiers is as follows
+
+``CLASSIFIERS = ("mcdcnnM", "cnnM", "mlpM", "fcnM", "encoderM", "resnetM", "inceptionM", "stresnetM", "mlpLstmM", "cnnLstmM") ``
+
+### Create the image
+run the following command to create the image, output.png
+
+``gprof2dot --colour-nodes-by-selftime -f pstats output.pstats |     dot -Tpng -o output.png``
+
+### Copy image to local machine
+In order to view the image, you will need to copy it to your local machine with the following command. Run this on your LOCAL MACHINE.
+
+``scp <username>@login.delta.ncsa.illinois.edu:<your current filepath>/output.png <directory you want to copy to>``
+
+
+
+
 
