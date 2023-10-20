@@ -53,7 +53,7 @@ run the following command to create the image, output.png
 
 ``gprof2dot --colour-nodes-by-selftime -f pstats output.pstats |     dot -Tpng -o output.png``
 
-Note: You will need programs gprof2dot and dot, which are available on Mahuika and Maui. Use conda install ``gprof2dot``. Package graphviz is already installed in the TFwesad environment.
+**Note**: You will need programs gprof2dot and dot, which are available on Mahuika and Maui. Use ``conda install gprof2dot``. Package graphviz is already installed in the TFwesad environment.
 
 ### Copy image to local machine
 In order to view the image, you will need to copy it to your local machine with the following command. Run this on your LOCAL MACHINE.
