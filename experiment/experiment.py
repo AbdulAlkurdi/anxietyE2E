@@ -1,6 +1,7 @@
 import math
 import os
 import random
+import time
 from abc import ABC, abstractmethod
 
 import numpy as np
@@ -21,6 +22,7 @@ from multimodal_classfiers.resnet import ClassifierResnet
 #from multimodal_classfiers.stresnet import ClassifierStresnet
 from multimodal_classfiers.time_cnn import ClassifierTimeCnn
 from utils.utils import get_new_session, prepare_data
+#from hyperparameters import
 
 CLASSIFIERS = ("mcdcnnM", "cnnM", "mlpM", "fcnM", "encoderM", "resnetM", "inceptionM", "stresnetM", "mlpLstmM",
                "cnnLstmM")
@@ -97,14 +99,25 @@ class Experiment(ABC):
         self.no_channels = no_channels
 	# Change this line
         self.experiment_path = f"results_snr_0.5/{self.dataset_name}{dataset_name_suffix}"
-
+      
         self.prepare_experimental_setups()
+        self.classifyTime = 0
+        self.sessionRunTime = 0
+        
+      #  self.perform(1) #added here afterwards
+    
+    def get_classify_time(self):
+        return self.classifyTime
+    
+    def get_session_run_time(self):
+        return self.sessionRunTime
 
     @abstractmethod
     def prepare_experimental_setups(self):
         pass
 
     def perform(self, iterations, classifiers=CLASSIFIERS):
+        print("reched")
         for iteration in range(iterations):
             for classifier_name in classifiers:
                 self.perform_on_one_classifier(classifier_name, iteration)
@@ -121,9 +134,13 @@ class Experiment(ABC):
                         os.makedirs(output_directory, exist_ok=True)
 
                         try:
+                            time1 = time.time()
                             session.run(tf.compat.v1.global_variables_initializer())
                             model_init = self.perform_single_experiment(classifier_name, output_directory, setup,
                                                                         iteration, hyperparameters, model_init)
+                            time2 = time.time()
+                            delta = time2 - time1
+                            self.sessionRunTime += delta
                         except Timeout:
                             self.logger_obj.info("Experiment is being performed by another process")
 
@@ -146,9 +163,17 @@ class Experiment(ABC):
                                            hyperparameters=hyperparameters, model_init=model_init)
             self.logger_obj.info(
                 f"Created model for {self.dataset_name} dataset, classifier: {classifier_name}, setup: {setup.name}, iteration: {iteration}")
+            self.logger_obj.info(f"before method")
+            time1 = time.time()
             classifier.fit(setup.x_train, setup.y_train, setup.x_val, setup.y_val, setup.y_test,
                            x_test=setup.x_test, nb_epochs=setup.nb_epochs_fn(classifier_name),
                            batch_size=setup.batch_size_fn(classifier_name))
+            time2 = time.time()
+            delta = time2 - time1
+            self.logger_obj.info("Delta is {delta}")
+            #print("DELTA IS")
+            #print(delta)
+            self.classifyTime += delta
             self.logger_obj.info(
                 f"Fitted model for {self.dataset_name} dataset, classifier: {classifier_name}, setup: {setup.name}, iteration: {iteration}")
 

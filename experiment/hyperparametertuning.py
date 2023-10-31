@@ -91,8 +91,10 @@ class HyperparameterTuning():
         self._free_gpus = Queue()
         for gpu_id in range(len(self._gpus)):
             self._free_gpus.put(gpu_id)
-
+        
         self.trials_path = f"{self.experiment.experiment_path}/trials_objs/"
+        self.logger_obj.info("TRIALS PATH:")
+        self.logger_obj.info(f"{self.trials_path}")
         os.makedirs(self.trials_path, exist_ok=True)
 
     def tune_one(self, classifier_name, max_evals):
@@ -101,11 +103,19 @@ class HyperparameterTuning():
             with FileLock(f"{self.trials_path}/{classifier_name}.lock", timeout=0):
                 trials = self.load_trials(classifier_name)
                 next_trial_no = len(trials.trials)
+                self.logger_obj.info("NEXT TRIAL NO")
+                self.logger_obj.info(f"{next_trial_no}")
+
+                if next_trial_no >= max_evals:
+                    raise ValueError(f"results directory already exists. Please delete results directory before running again")
                 shutil.rmtree(
                     f"{self.experiment.experiment_path}/tune_{next_trial_no:02d}/{classifier_name}",
                     ignore_errors=True)
+                
+                
 
                 for trial_no in range(next_trial_no, max_evals):
+                    self.logger_obj.info("TEST PRINT STATEMENT")
                     fmin(fn=lambda x: self._objective(classifier_name, x, trial_no),
                          space=get_search_space(self.experiment.no_channels, classifier_name),
                          algo=tpe.suggest,
@@ -113,6 +123,9 @@ class HyperparameterTuning():
                          trials=trials)
 
                     self.save_trials(classifier_name, trials)
+                self.logger_obj.info("TUNE ONE FINISHED")
+                self.logger_obj.info(f"CLASSIFIER.FIT TIME: {self.experiment.get_classify_time()}")
+                self.logger_obj.info(f"SESSION.RUN TIME: {self.experiment.get_session_run_time()}")
         except Timeout:
             self.logger_obj.info(
                 f"Tuning of {classifier_name} (max_evals: {max_evals}) is being performed by another process")
