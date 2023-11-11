@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 for clas in cnnM resnetM; do
 
