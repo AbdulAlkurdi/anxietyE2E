@@ -3,7 +3,8 @@ import keras
 import numpy as np
 
 from multimodal_classfiers.classifier import Classifier
-
+import warnings
+warnings.filterwarnings("ignore")
 
 class ClassifierStresnet(Classifier):
 

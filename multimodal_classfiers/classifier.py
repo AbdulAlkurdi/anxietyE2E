@@ -8,7 +8,8 @@ from keras.optimizers import Adam
 from multimodal_classfiers.hyperparameters import Hyperparameters
 from utils.loggerwrapper import GLOBAL_LOGGER
 from utils.utils import save_logs
-
+import warnings
+warnings.filterwarnings("ignore")
 
 class Classifier(ABC):
     def __init__(self, output_directory, input_shapes, nb_classes, verbose=False, hyperparameters=None,

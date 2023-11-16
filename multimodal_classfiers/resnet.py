@@ -1,7 +1,8 @@
 import keras
 
 from multimodal_classfiers.classifier import Classifier, get_multipliers
-
+import warnings
+warnings.filterwarnings("ignore")
 
 class ClassifierResnet(Classifier):
     def build_model(self, input_shapes, nb_classes, hyperparameters):

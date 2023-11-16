@@ -5,7 +5,8 @@ from arpreprocessing.ascertain import Ascertain
 from arpreprocessing.decaf import Decaf
 from arpreprocessing.wesad import Wesad
 from utils.loggerwrapper import GLOBAL_LOGGER
-
+import warnings
+warnings.filterwarnings("ignore")
 if __name__ == '__main__':
     config = configparser.ConfigParser()
     config.read("config.ini")

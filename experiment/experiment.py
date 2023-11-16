@@ -2,11 +2,13 @@ import math
 import os
 import random
 from abc import ABC, abstractmethod
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 import numpy as np
 import tensorflow as tf
 from filelock import Timeout, FileLock
 from tensorflow import Graph
+import warnings
 
 from arpreprocessing.dataset import Dataset
 from multimodal_classfiers.cnn_lstm import ClassifierCnnLstm
@@ -21,6 +23,7 @@ from multimodal_classfiers.resnet import ClassifierResnet
 from multimodal_classfiers.stresnet import ClassifierStresnet
 from multimodal_classfiers.time_cnn import ClassifierTimeCnn
 from utils.utils import get_new_session, prepare_data
+warnings.filterwarnings('ignore', category=DeprecationWarning)
 
 CLASSIFIERS = ("mcdcnnM", "cnnM", "mlpM", "fcnM", "encoderM", "resnetM", "inceptionM", "stresnetM", "mlpLstmM",
                "cnnLstmM")
@@ -165,7 +168,8 @@ class Experiment(ABC):
 
 
 def get_experimental_setup(logger_obj, channels_ids, test_ids, train_ids, val_ids, name, dataset_name):
-    path = "archives/mts_archive/"
+    
+    path = "/mnt/c/Users/alkurdi/Desktop/Vansh/data/WESAD/E2Epreprocessed"
     dataset = Dataset(dataset_name, None, logger_obj)
     x_test, y_test, sampling_test = dataset.load(path, test_ids, channels_ids)
     x_val, y_val, sampling_val = dataset.load(path, val_ids, channels_ids)

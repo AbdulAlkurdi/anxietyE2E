@@ -8,7 +8,8 @@ from matplotlib import pyplot as plt
 from scipy.interpolate import interp1d
 from sklearn.metrics import precision_score, accuracy_score, recall_score, f1_score, roc_auc_score
 from sklearn.preprocessing import LabelEncoder
-
+import warnings
+warnings.filterwarnings("ignore")
 
 class NoSuchClassifier(Exception):
     def __init__(self, classifier_name):

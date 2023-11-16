@@ -2,7 +2,8 @@ import keras
 from keras.layers import Input, Conv1D, Flatten, Dense, LSTM, TimeDistributed, MaxPooling1D
 
 from multimodal_classfiers.classifier import Classifier, reshape_samples
-
+import warnings
+warnings.filterwarnings("ignore")
 
 class ClassifierCnnLstm(Classifier):
     def build_model(self, input_shapes, nb_classes, hyperparameters):

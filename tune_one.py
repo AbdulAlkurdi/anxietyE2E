@@ -1,5 +1,5 @@
 import sys
-
+import os
 from experiment.acertainexperiment import AscertainExperimentNFold
 from experiment.amigosexperiment import AmigosExperimentNFold
 from experiment.decafexperiment import DecafExperimentNFold
@@ -7,6 +7,10 @@ from experiment.hyperparametertuning import HyperparameterTuning
 from experiment.wesadexperiment import WesadExperimentNFold
 from utils.loggerwrapper import GLOBAL_LOGGER
 from utils.utils import set_available_gpus
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
+import warnings
+warnings.filterwarnings("ignore")
 
 
 def get_dataset(name):
