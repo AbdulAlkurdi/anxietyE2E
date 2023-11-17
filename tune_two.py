@@ -24,7 +24,7 @@ def get_dataset(name):
 if __name__ == '__main__':
     try:
         _, _, dataset_name, clas, max_eval = sys.argv
-        #gpu_id = '01'
+        gpu_id = '01'
         set_available_gpus(gpu_id)
         dataset = get_dataset(dataset_name)
 
