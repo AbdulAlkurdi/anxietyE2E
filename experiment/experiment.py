@@ -3,7 +3,7 @@ import os
 import random
 from abc import ABC, abstractmethod
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-
+from time import sleep
 import numpy as np
 import tensorflow as tf
 from filelock import Timeout, FileLock
@@ -115,6 +115,11 @@ class Experiment(ABC):
         with Graph().as_default():
             session = get_new_session()
             with session.as_default():
+
+                print(f'/device:GPU:{gpu} requested')
+                print(f'available devices: {tf.experimental.config.list_physical_devices()}')
+                time.sleep(15)
+
                 with tf.device(f'/device:GPU:{gpu}'):
                     model_init = None
 
@@ -169,7 +174,7 @@ class Experiment(ABC):
 
 def get_experimental_setup(logger_obj, channels_ids, test_ids, train_ids, val_ids, name, dataset_name):
     
-    path = "/mnt/c/Users/alkurdi/Desktop/Vansh/data/WESAD/E2Epreprocessed"
+    path = "/mnt/c/Users/alkurdi/Desktop/Vansh/data/E2Epreprocessed"
     dataset = Dataset(dataset_name, None, logger_obj)
     x_test, y_test, sampling_test = dataset.load(path, test_ids, channels_ids)
     x_val, y_val, sampling_val = dataset.load(path, val_ids, channels_ids)

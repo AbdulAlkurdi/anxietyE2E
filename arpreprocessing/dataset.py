@@ -25,8 +25,9 @@ class Dataset:
                 pickle.dump(subject.y, f)
 
     def load(self, path: str, subject_ids: tuple, channels_ids: tuple):
-        self._logger.info("Loading data for subjects {} and channels {}".format(subject_ids, channels_ids))
-
+        #self._logger.info("Loading data for subjects {} and channels {}".format(subject_ids, channels_ids))
+        self._logger.info("Loading data for subjects {} and channels [muted]".format(subject_ids))
+        
         path = "{}/{}/".format(path, self.name)
         x = [[] for i in range(max(channels_ids) + 1)]
         sampling = [-1 for i in range(max(channels_ids) + 1)]
@@ -42,7 +43,9 @@ class Dataset:
         sampling = [i for i in sampling if i != -1]
         x = [i for i in x if i]
 
-        self._logger.info("Finished loading data for subjects {} and channels {}".format(subject_ids, channels_ids))
+        #self._logger.info("Finished loading data for subjects {} and channels {}".format(subject_ids, channels_ids))
+        self._logger.info("Finished loading data for subjects {} and channels: [muted]".format(subject_ids))
+
         return x, y, sampling
 
     @staticmethod
