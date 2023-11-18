@@ -1,0 +1,58 @@
+2023-11-18 07:05:08,462 [INFO] GPU 0 was taken for mlpLstmM, tune_06.
+INFO:mylogger:GPU 0 was taken for mlpLstmM, tune_06.
+WARNING:tensorflow:From /home/alkurdi/ml_projects/dziezyc_local/utils/utils.py:72: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From /home/alkurdi/ml_projects/dziezyc_local/utils/utils.py:72: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From /home/alkurdi/ml_projects/dziezyc_local/utils/utils.py:76: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /home/alkurdi/ml_projects/dziezyc_local/utils/utils.py:76: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2023-11-18 07:05:08.497705: I tensorflow/core/platform/profile_utils/cpu_utils.cc:109] CPU Frequency: 3792550000 Hz
+2023-11-18 07:05:08.497850: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55fbad560d10 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2023-11-18 07:05:08.497868: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2023-11-18 07:05:08.499175: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2023-11-18 07:05:08.599287: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1082] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-11-18 07:05:08.599830: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55fbad51da40 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2023-11-18 07:05:08.599846: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): NVIDIA GeForce RTX 3070, Compute Capability 8.6
+2023-11-18 07:05:08.599995: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1082] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-11-18 07:05:08.600539: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1666] Found device 0 with properties: 
+name: NVIDIA GeForce RTX 3070 major: 8 minor: 6 memoryClockRate(GHz): 1.77
+pciBusID: 0000:0a:00.0
+2023-11-18 07:05:08.600558: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-11-18 07:05:09.051433: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2023-11-18 07:05:09.303184: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2023-11-18 07:05:09.415241: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2023-11-18 07:05:09.523233: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.11
+2023-11-18 07:05:09.632600: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2023-11-18 07:05:09.673006: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2023-11-18 07:05:09.673166: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1082] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-11-18 07:05:09.673814: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1082] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-11-18 07:05:09.674346: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1794] Adding visible gpu devices: 0
+2023-11-18 07:05:09.687358: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-11-18 07:05:22.964000: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1206] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-11-18 07:05:22.964030: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1212]      0 
+2023-11-18 07:05:22.964036: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1225] 0:   N 
+2023-11-18 07:05:22.969871: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1082] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-11-18 07:05:22.970440: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1082] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-11-18 07:05:22.970940: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1351] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 5892 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce RTX 3070, pci bus id: 0000:0a:00.0, compute capability: 8.6)
+WARNING:tensorflow:From /home/alkurdi/ml_projects/dziezyc_local/experiment/experiment.py:123: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From /home/alkurdi/ml_projects/dziezyc_local/experiment/experiment.py:123: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2023-11-18 07:05:22,985 [INFO] Experiment for WESAD dataset, classifier: mlpLstmM, setup: it_00, iteration: tune_06
+INFO:mylogger:Experiment for WESAD dataset, classifier: mlpLstmM, setup: it_00, iteration: tune_06
+WARNING:tensorflow:From /home/alkurdi/anaconda3/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /home/alkurdi/anaconda3/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /home/alkurdi/anaconda3/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /home/alkurdi/anaconda3/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /home/alkurdi/anaconda3/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:148: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+WARNING:tensorflow:From /home/alkurdi/anaconda3/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:148: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+WARNING:tensorflow:From /home/alkurdi/anaconda3/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
