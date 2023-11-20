@@ -1,0 +1,66 @@
+\begin{table*}
+\centering
+\caption{caption}
+\label{tab:metricsForClasses}
+\begin{tabular}{|l|l|r|r|r|r|}
+\toprule
+Dataset &      Class &  Precision (std) &  Recall &  F1-score (std) &  Support \\
+\midrule
+  WESAD &   Baseline &             0.08 &    0.77 &            0.09 &   117.40 \\
+  WESAD &    Anxiety &             0.10 &    0.95 &            0.07 &    66.40 \\
+  WESAD &  Amusement &             0.28 &    0.59 &            0.19 &    37.20 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}
+\centering
+\caption{Results for WESAD ordered by averaged F1-score}
+\label{tab:WESADResults}
+\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+\toprule
+   Architecture &  Accuracy &  Accuracy (std) &  F1-score &  F1-score (std) &  ROC AUC &  ROC AUC (std) \\
+\midrule
+            FCN &      0.79 &            0.03 &      0.75 &            0.04 &     0.93 &           0.01 \\
+         Resnet &      0.80 &            0.05 &      0.74 &            0.07 &     0.90 &           0.04 \\
+       Time-CNN &      0.76 &            0.03 &      0.67 &            0.04 &     0.87 &           0.02 \\
+         MCDCNN &      0.74 &            0.03 &      0.65 &            0.05 &     0.87 &           0.02 \\
+       MLP-LSTM &      0.72 &            0.02 &      0.60 &            0.03 &     0.82 &           0.02 \\
+        Encoder &      0.69 &            0.04 &      0.59 &            0.05 &     0.80 &           0.03 \\
+            MLP &      0.69 &            0.01 &      0.59 &            0.02 &     0.81 &           0.01 \\
+       CNN-LSTM &      0.69 &            0.02 &      0.54 &            0.02 &     0.78 &           0.02 \\
+      Inception &      0.65 &            0.07 &      0.52 &            0.07 &     0.77 &           0.06 \\
+   Random guess &      0.33 &              -- &      0.32 &              -- &       -- &             -- \\
+ Majority class &      0.53 &              -- &      0.23 &              -- &       -- &             -- \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+  Dataset  Baseline  Anxiety  Amusement   
+0   WESAD       587      332        186  0
+\begin{table*}
+\centering
+\caption{Classes balance in datasets}
+\label{tab:datasetsClassesBalance}
+\begin{tabular}{|l|r|r|r|r|}
+\toprule
+Dataset &  Baseline &  Anxiety & \multicolumn{2}{l}{Amusement} \\
+\midrule
+  WESAD &       587 &      332 &        186 &  0 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}
+\centering
+\caption{Classes balance in datasets in percentage}
+\label{tab:datasetsClassesBalancePerc}
+\begin{tabular}{|l|r|r|r|r|}
+\toprule
+Dataset &  Baseline &  Anxiety & \multicolumn{2}{l}{Amusement} \\
+\midrule
+  WESAD &       53\% &      30\% &        17\% & 0\% \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
