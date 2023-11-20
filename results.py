@@ -10,7 +10,6 @@ from sklearn.metrics import accuracy_score, f1_score, classification_report
 
 WESAD_SUBJECTS = list(itertools.chain(range(2, 12), range(13, 18)))
 
-
 def datasets_metrics():
     results = []
 
@@ -18,40 +17,10 @@ def datasets_metrics():
         setups = [f"it_{it:02d}" for it in range(5)]
         add_baseline(dataset, results)
 
-        for architecture in ['mcdcnnM', 'cnnM', 'stresnetM', 'mlpM', 'fcnM', 'encoderM', 'resnetM', 'inceptionM',
-                             'mlpLstmM', 'cnnLstmM']:
+        for architecture in ['mcdcnnM', 'cnnM',  'mlpM', 'fcnM', 'encoderM', 'resnetM', 'inceptionM',
+                             'mlpLstmM', 'cnnLstmM']: #'stresnetM',
             for eval_i in range(10):
                 results += get_result(architecture, dataset, eval_i, setups)
-    #print(f'{type(results)}')
-    print('\n\n')
-    print('-'*20)
-    
-    columns = ["Dataset", "Architecture", "Fold", "Evaluation", "Loss", "Loss (std)", "Accuracy",
-                                 "Accuracy (std)", "F1", "F1 (std)", "AUC", "AUC (std)", "Duration",
-                                 "Duration (std)"]
-    #res_array = np.asarray(results)
-    #print(np.shape(res_array), res_array)
-    #res_array = np.array(results)
-    #print(np.shape(res_array), res_array)
-    print(results[0])
-    res_array = np.array([*results[0]])
-    
-    for i in range((len(results)):
-        res_array = np.append(res_array, results[i])
-    
-    print(np.shape(res_array), res_array)
-
-    #res_array = np.asmatrix(results)
-    ##print(np.shape(res_array), res_array)
-    #res_array = np.empty_like(np.array(results))
-    #print(np.shape(res_array), res_array)
-
-    #rint(np.reshape(res_array,[550,10]))
-    
-    res_dict = {}
-    for column in columns:
-        #res_dict[column] = results []
-        pass 
     return pd.DataFrame(results,
                         columns=["Dataset", "Architecture", "Fold", "Evaluation", "Loss", "Loss (std)", "Accuracy",
                                  "Accuracy (std)", "F1", "F1 (std)", "AUC", "AUC (std)", "Duration",
@@ -131,7 +100,7 @@ def count_classes_representation():
             if not os.path.exists(path):
                 continue
             counts[dataset] += pickle.load(open(path, "rb"))
-
+            
         counts[dataset] = Counter(counts[dataset])
 
         line = [dataset]
@@ -139,7 +108,9 @@ def count_classes_representation():
             line.append(counts[dataset][i])
         results.append(line)
 
-    df = pd.DataFrame(results, columns=["Dataset", "LALV", "LAHV", "HALV", "HAHV"])
+    df = pd.DataFrame(results, columns=["Dataset", "Baseline", "Anxiety", "Amusement", ""])
+
+    print(df)
     return df
 
 
@@ -213,10 +184,10 @@ def print_classification_metrics_for_classes(results, evaluation_df):
     metrics = pd.DataFrame(metrics, columns=["Dataset", "Class", "Precision", "Precision (std)", "Recall",
                                              "Recall (std)", "F1-score", "F1-score (std)", "Support"])
 
-    metrics.Class = metrics.Class.apply(lambda x: ["LALV", "LAHV", "HALV", "HAHV"][x])
+    metrics.Class = metrics.Class.apply(lambda x: ["Baseline", "Anxiety", "Amusement", "HAHV"][x])
 
     with pd.option_context("display.float_format", "{:,.2f}".format):
-        columns = [0, 1, 6, 2, 4, 8]
+        columns = [0, 1, 3, 4, 7, 8]
         column_format = "|l|l" + ((len(columns) - 2) * "|r") + "|"
         caption = "caption"
         label = "tab:metricsForClasses"
