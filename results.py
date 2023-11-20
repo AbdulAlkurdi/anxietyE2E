@@ -14,7 +14,7 @@ WESAD_SUBJECTS = list(itertools.chain(range(2, 12), range(13, 18)))
 def datasets_metrics():
     results = []
 
-    for dataset in ["WESAD_5_fold", "DECAF_5_fold", "ASCERTAIN_5_fold", "Amigos_5_fold"]:
+    for dataset in ["WESAD_5_fold"]:#, "DECAF_5_fold", "ASCERTAIN_5_fold", "Amigos_5_fold"]:
         setups = [f"it_{it:02d}" for it in range(5)]
         add_baseline(dataset, results)
 
@@ -22,7 +22,36 @@ def datasets_metrics():
                              'mlpLstmM', 'cnnLstmM']:
             for eval_i in range(10):
                 results += get_result(architecture, dataset, eval_i, setups)
+    #print(f'{type(results)}')
+    print('\n\n')
+    print('-'*20)
+    
+    columns = ["Dataset", "Architecture", "Fold", "Evaluation", "Loss", "Loss (std)", "Accuracy",
+                                 "Accuracy (std)", "F1", "F1 (std)", "AUC", "AUC (std)", "Duration",
+                                 "Duration (std)"]
+    #res_array = np.asarray(results)
+    #print(np.shape(res_array), res_array)
+    #res_array = np.array(results)
+    #print(np.shape(res_array), res_array)
+    print(results[0])
+    res_array = np.array([*results[0]])
+    
+    for i in range((len(results)):
+        res_array = np.append(res_array, results[i])
+    
+    print(np.shape(res_array), res_array)
 
+    #res_array = np.asmatrix(results)
+    ##print(np.shape(res_array), res_array)
+    #res_array = np.empty_like(np.array(results))
+    #print(np.shape(res_array), res_array)
+
+    #rint(np.reshape(res_array,[550,10]))
+    
+    res_dict = {}
+    for column in columns:
+        #res_dict[column] = results []
+        pass 
     return pd.DataFrame(results,
                         columns=["Dataset", "Architecture", "Fold", "Evaluation", "Loss", "Loss (std)", "Accuracy",
                                  "Accuracy (std)", "F1", "F1 (std)", "AUC", "AUC (std)", "Duration",
@@ -95,7 +124,7 @@ def count_classes_representation():
     counts = {}
     results = []
 
-    for dataset in ["ASCERTAIN", "DECAF", "Amigos", "WESAD"]:
+    for dataset in ["WESAD"]:#$"ASCERTAIN", "DECAF", "Amigos", "WESAD"]:
         counts[dataset] = []
         for subject in range(100):
             path = f"archives/mts_archive/{dataset}/y_{subject}.pkl"
