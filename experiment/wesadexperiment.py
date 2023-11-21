@@ -2,7 +2,7 @@ from arpreprocessing.wesad import Wesad
 from experiment.experiment import Experiment, prepare_experimental_setups_n_iterations, \
     n_fold_split
 
-SIGNALS_LEN = 14
+SIGNALS_LEN = 11
 
 
 class WesadExperimentNFold(Experiment):

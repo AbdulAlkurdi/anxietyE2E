@@ -74,7 +74,8 @@ class WesadSubject(Subject):
 
     @staticmethod
     def load_subject_data_from_file(path, id):
-        with open("{0}/S{1}/S{1}.pkl".format(path, id), 'rb') as f:
+    	# changed for binary results
+        with open("{0}/S{1}/S{1}binary.pkl".format(path, id), 'rb') as f:
             data = pickle.load(f, encoding='latin1')
         return data
 

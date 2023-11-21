@@ -95,7 +95,7 @@ class Experiment(ABC):
         self.logger_obj = logger
         self.experimental_setups = None
         self.no_channels = no_channels
-        self.experiment_path = f"results/{self.dataset_name}{dataset_name_suffix}"
+        self.experiment_path = f"binary_results/{self.dataset_name}{dataset_name_suffix}"
 
         self.prepare_experimental_setups()
 
@@ -165,7 +165,7 @@ class Experiment(ABC):
 
 
 def get_experimental_setup(logger_obj, channels_ids, test_ids, train_ids, val_ids, name, dataset_name):
-    path = "archives/mts_archive/"
+    path = "archives/mts_archive_ reduced"
     dataset = Dataset(dataset_name, None, logger_obj)
     x_test, y_test, sampling_test = dataset.load(path, test_ids, channels_ids)
     x_val, y_val, sampling_val = dataset.load(path, val_ids, channels_ids)
