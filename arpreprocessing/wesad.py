@@ -9,7 +9,6 @@ from arpreprocessing.preprocessor import Preprocessor
 from arpreprocessing.signal import Signal, NoSuchSignal
 from arpreprocessing.subject import Subject
 
-
 class Wesad(Preprocessor):
     SUBJECTS_IDS = list(it.chain(range(2, 12), range(13, 18)))
     SUBJECTS_IDS_STRESS_VER = (2, 3, 6, 9, 11, 14, 16)
@@ -90,10 +89,14 @@ class WesadSubject(Subject):
         new_data = {'label': np.array(data['label']), "signal": {}}
         for device in data['signal']:
             for type in data['signal'][device]:
-                for i in range(len(data['signal'][device][type][0])):
-                    signal_name = '_'.join([device, type, str(i)])
-                    signal = np.array([x[i] for x in data['signal'][device][type]])
-                    new_data["signal"][signal_name] = signal
+                #modified this section to get rid of chest EMG, EDA, and Temp to match RADWear and WEAR modalities
+                if (type == 'EMG' or type == 'EDA' or type == 'Temp') & (device == 'chest'):
+                    pass
+                else:
+                    for i in range(len(data['signal'][device][type][0])):
+                        signal_name = '_'.join([device, type, str(i)])
+                        signal = np.array([x[i] for x in data['signal'][device][type]])
+                        new_data["signal"][signal_name] = signal
         return new_data
 
     def _filter_all_signals(self, data):

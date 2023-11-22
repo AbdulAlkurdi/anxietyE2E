@@ -99,7 +99,7 @@ def count_classes_representation():
     for dataset in ["ASCERTAIN", "DECAF", "Amigos", "WESAD"]:
         counts[dataset] = []
         for subject in range(100):
-            path = f"archives/mts_archive/{dataset}/y_{subject}.pkl"
+            path = f"archives/E2Eprocessing_reduced/{dataset}/y_{subject}.pkl"
             if not os.path.exists(path):
                 continue
             counts[dataset] += pickle.load(open(path, "rb"))

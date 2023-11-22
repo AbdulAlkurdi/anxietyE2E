@@ -98,7 +98,7 @@ class Experiment(ABC):
         self.logger_obj = logger
         self.experimental_setups = None
         self.no_channels = no_channels
-        self.experiment_path = f"results/{self.dataset_name}{dataset_name_suffix}"
+        self.experiment_path = f"results_reduced/{self.dataset_name}{dataset_name_suffix}"
 
         self.prepare_experimental_setups()
 
@@ -116,9 +116,6 @@ class Experiment(ABC):
             session = get_new_session()
             with session.as_default():
 
-                print(f'/device:GPU:{gpu} requested')
-                print(f'available devices: {tf.experimental.config.list_physical_devices()}')
-                time.sleep(15)
 
                 with tf.device(f'/device:GPU:{gpu}'):
                     model_init = None
@@ -174,7 +171,7 @@ class Experiment(ABC):
 
 def get_experimental_setup(logger_obj, channels_ids, test_ids, train_ids, val_ids, name, dataset_name):
     
-    path = "/mnt/c/Users/alkurdi/Desktop/Vansh/data/E2Epreprocessed"
+    path = "/mnt/d/Users/alkurdi/data/E2Epreprocessed_reduced"
     dataset = Dataset(dataset_name, None, logger_obj)
     x_test, y_test, sampling_test = dataset.load(path, test_ids, channels_ids)
     x_val, y_val, sampling_val = dataset.load(path, val_ids, channels_ids)
