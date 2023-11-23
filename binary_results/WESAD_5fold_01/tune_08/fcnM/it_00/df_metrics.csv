@@ -1,0 +1,2 @@
+precision,accuracy,recall,duration,f1,auc
+1.0,1.0,1.0,611.3928799629211,1.0,0.0
