@@ -5,13 +5,13 @@
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1  
 #SBATCH --partition=gpuA100x4
-#SBATCH --account=bbyn-delta-gpu
+#SBATCH --account=bbnp-delta-gpu
 #SBATCH --job-name=wesad_reduced
-#SBATCH --time=48:00:00      # hh:mm:ss for the job
+#SBATCH --time=06:00:00      # hh:mm:ss for the job
 #SBATCH --constraint="scratch"
 #SBATCH --gpus-per-node=1
-#SBATCH -o ./job_logs/job_%x_%j.out
-#SBATCH --mail-user=louislidelta@gmail.com
+#SBATCH -o ./job_logs/job_%x_%j_"$1"_"$2"_"$3".out
+#SBATCH --mail-user=alkurdi2@illinois.edu
 #SBATCH --mail-type="END" 
  
 module list
@@ -30,8 +30,6 @@ echo "dataset=$dataset"
 echo "clas=$clas"
 echo "max_eval=$max_eval"
 echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
-
-
 echo " "
 echo " ******************************"	
 echo " ******* i_fold=$i_fold *******"
