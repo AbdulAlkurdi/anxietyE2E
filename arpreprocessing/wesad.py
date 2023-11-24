@@ -46,7 +46,7 @@ def target_sampling(channel_name: str):
     if channel_name.startswith("wrist"):
         return original_sampling(channel_name)
     if channel_name == "label":
-        return 700
+        return 70
     raise NoSuchSignal(channel_name)
 
 
