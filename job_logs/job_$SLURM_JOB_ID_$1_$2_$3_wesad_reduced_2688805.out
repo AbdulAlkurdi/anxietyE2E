@@ -1,0 +1,90 @@
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   7) default           13) libxcrypt/4.4.35
+  2) gcc/11.2.0          8) libmd/1.0.4       14) zlib-ng/2.1.3
+  3) ucx/1.11.2          9) libbsd/0.11.7     15) openssl/3.1.3
+  4) openmpi/4.1.2      10) expat/2.5.0       16) util-linux-uuid/2.38.1
+  5) cuda/11.6.1        11) gettext/0.19.8.1  17) xz/5.2.4
+  6) modtree/gpu        12) libffi/3.4.4      18) python/3.11.6
+
+ 
+
+job is starting on gpub077.delta.ncsa.illinois.edu
+dataset=wesad
+clas=cnnM
+max_eval=10
+i_fold=02
+CUDA_VISIBLE_DEVICES=0
+ 
+ ******************************
+ ******* i_fold=02 *******
+ ******************************
+ 
+Thu Nov 23 20:34:39 CST 2023
+WARNING:tensorflow:Deprecation warnings have been disabled. Set TF_ENABLE_DEPRECATION_WARNINGS=1 to re-enable them.
+WARNING:root:Limited tf.compat.v2.summary API due to missing TensorBoard installation.
+Using TensorFlow backend.
+2023-11-23 20:35:23,515 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:23,584 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:23,588 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:23,649 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:23,651 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:23,759 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:23,947 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:23,972 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:23,973 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,001 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,001 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,082 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,116 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,142 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,144 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,169 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,171 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,251 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,284 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,309 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,310 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,334 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,336 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,416 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,449 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,474 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,475 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,499 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,500 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,581 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 20:35:24,609 [INFO] Tuning of cnnM, max_evals: 10
+INFO:mylogger:Tuning of cnnM, max_evals: 10
+Done
+Thu Nov 23 20:35:28 CST 2023

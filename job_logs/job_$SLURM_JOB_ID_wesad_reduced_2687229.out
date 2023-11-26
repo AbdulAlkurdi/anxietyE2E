@@ -1,0 +1,674 @@
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   3) ucx/1.11.2      5) cuda/11.6.1   7) default
+  2) gcc/11.2.0          4) openmpi/4.1.2   6) modtree/gpu
+
+ 
+
+job is starting on gpub034.delta.ncsa.illinois.edu
+dataset=wesad
+clas=inceptionM
+max_eval=8
+CUDA_VISIBLE_DEVICES=0
+ 
+ ******************************
+ ******* i_fold=00 *******
+ ******************************
+ 
+Thu Nov 23 13:07:01 CST 2023
+WARNING:tensorflow:Deprecation warnings have been disabled. Set TF_ENABLE_DEPRECATION_WARNINGS=1 to re-enable them.
+WARNING:root:Limited tf.compat.v2.summary API due to missing TensorBoard installation.
+Using TensorFlow backend.
+2023-11-23 13:07:06,731 [INFO] Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:06,762 [INFO] Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:06,762 [INFO] Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:06,791 [INFO] Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:06,791 [INFO] Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:06,878 [INFO] Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:06,901 [INFO] Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:06,926 [INFO] Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:06,926 [INFO] Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:06,949 [INFO] Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:06,949 [INFO] Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,032 [INFO] Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,056 [INFO] Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,080 [INFO] Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,080 [INFO] Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,104 [INFO] Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,104 [INFO] Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,185 [INFO] Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,208 [INFO] Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,232 [INFO] Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,232 [INFO] Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,258 [INFO] Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,258 [INFO] Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,336 [INFO] Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,356 [INFO] Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,379 [INFO] Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,379 [INFO] Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,401 [INFO] Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,401 [INFO] Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,475 [INFO] Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:07,496 [INFO] Tuning of inceptionM, max_evals: 8
+INFO:mylogger:Tuning of inceptionM, max_evals: 8
+2023-11-23 13:07:07,498 [INFO] Tuning of inceptionM (max_evals: 8) is being performed by another process
+INFO:mylogger:Tuning of inceptionM (max_evals: 8) is being performed by another process
+ 
+ ******************************
+ ******* i_fold=01 *******
+ ******************************
+ 
+Thu Nov 23 13:07:07 CST 2023
+WARNING:tensorflow:Deprecation warnings have been disabled. Set TF_ENABLE_DEPRECATION_WARNINGS=1 to re-enable them.
+WARNING:root:Limited tf.compat.v2.summary API due to missing TensorBoard installation.
+Using TensorFlow backend.
+2023-11-23 13:07:13,077 [INFO] Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,112 [INFO] Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,112 [INFO] Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,141 [INFO] Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,141 [INFO] Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,226 [INFO] Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,256 [INFO] Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,280 [INFO] Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,280 [INFO] Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,302 [INFO] Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,302 [INFO] Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,371 [INFO] Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,400 [INFO] Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,423 [INFO] Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,423 [INFO] Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,446 [INFO] Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,446 [INFO] Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,515 [INFO] Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,541 [INFO] Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,567 [INFO] Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,568 [INFO] Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,591 [INFO] Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,591 [INFO] Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,666 [INFO] Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,688 [INFO] Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,714 [INFO] Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,714 [INFO] Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,738 [INFO] Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,738 [INFO] Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,816 [INFO] Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:13,840 [INFO] Tuning of inceptionM, max_evals: 8
+INFO:mylogger:Tuning of inceptionM, max_evals: 8
+2023-11-23 13:07:13,841 [INFO] Tuning of inceptionM (max_evals: 8) is being performed by another process
+INFO:mylogger:Tuning of inceptionM (max_evals: 8) is being performed by another process
+ 
+ ******************************
+ ******* i_fold=02 *******
+ ******************************
+ 
+Thu Nov 23 13:07:14 CST 2023
+WARNING:tensorflow:Deprecation warnings have been disabled. Set TF_ENABLE_DEPRECATION_WARNINGS=1 to re-enable them.
+WARNING:root:Limited tf.compat.v2.summary API due to missing TensorBoard installation.
+Using TensorFlow backend.
+2023-11-23 13:07:19,288 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,317 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,317 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,345 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,345 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,430 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,454 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,479 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,479 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,502 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,502 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,582 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,606 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,630 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,630 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,654 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,654 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,733 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,755 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,779 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,779 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,801 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,801 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,875 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,896 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,920 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,920 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,942 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:19,942 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:20,016 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:20,039 [INFO] Tuning of inceptionM, max_evals: 8
+INFO:mylogger:Tuning of inceptionM, max_evals: 8
+2023-11-23 13:07:20,041 [INFO] Tuning of inceptionM (max_evals: 8) is being performed by another process
+INFO:mylogger:Tuning of inceptionM (max_evals: 8) is being performed by another process
+ 
+ ******************************
+ ******* i_fold=03 *******
+ ******************************
+ 
+Thu Nov 23 13:07:20 CST 2023
+WARNING:tensorflow:Deprecation warnings have been disabled. Set TF_ENABLE_DEPRECATION_WARNINGS=1 to re-enable them.
+WARNING:root:Limited tf.compat.v2.summary API due to missing TensorBoard installation.
+Using TensorFlow backend.
+2023-11-23 13:07:25,162 [INFO] Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,189 [INFO] Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,189 [INFO] Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,217 [INFO] Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,217 [INFO] Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,297 [INFO] Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,319 [INFO] Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,343 [INFO] Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,343 [INFO] Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,367 [INFO] Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,367 [INFO] Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,445 [INFO] Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,465 [INFO] Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,489 [INFO] Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,490 [INFO] Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,513 [INFO] Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,514 [INFO] Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,590 [INFO] Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,612 [INFO] Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,637 [INFO] Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,637 [INFO] Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,661 [INFO] Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,661 [INFO] Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,737 [INFO] Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,760 [INFO] Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,787 [INFO] Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,788 [INFO] Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,815 [INFO] Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,821 [INFO] Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,893 [INFO] Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:25,916 [INFO] Tuning of inceptionM, max_evals: 8
+INFO:mylogger:Tuning of inceptionM, max_evals: 8
+2023-11-23 13:07:25,919 [INFO] Tuning of inceptionM (max_evals: 8) is being performed by another process
+INFO:mylogger:Tuning of inceptionM (max_evals: 8) is being performed by another process
+ 
+ ******************************
+ ******* i_fold=04 *******
+ ******************************
+ 
+Thu Nov 23 13:07:26 CST 2023
+WARNING:tensorflow:Deprecation warnings have been disabled. Set TF_ENABLE_DEPRECATION_WARNINGS=1 to re-enable them.
+WARNING:root:Limited tf.compat.v2.summary API due to missing TensorBoard installation.
+Using TensorFlow backend.
+2023-11-23 13:07:30,994 [INFO] Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,024 [INFO] Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,024 [INFO] Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,050 [INFO] Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,050 [INFO] Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,126 [INFO] Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,147 [INFO] Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,170 [INFO] Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,170 [INFO] Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,192 [INFO] Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,192 [INFO] Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,265 [INFO] Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,285 [INFO] Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,308 [INFO] Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,308 [INFO] Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,329 [INFO] Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,330 [INFO] Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,401 [INFO] Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,423 [INFO] Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,447 [INFO] Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,448 [INFO] Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,470 [INFO] Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,471 [INFO] Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,543 [INFO] Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,566 [INFO] Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,589 [INFO] Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,590 [INFO] Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,613 [INFO] Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,614 [INFO] Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,687 [INFO] Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:07:31,710 [INFO] Tuning of inceptionM, max_evals: 8
+INFO:mylogger:Tuning of inceptionM, max_evals: 8
+2023-11-23 13:07:31,735 [INFO] GPU 0 was taken for inceptionM, tune_02.
+INFO:mylogger:GPU 0 was taken for inceptionM, tune_02.
+WARNING:tensorflow:From /projects/bbnp/anxietyE2E/experiment/experiment.py:128: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From /projects/bbnp/anxietyE2E/experiment/experiment.py:128: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2023-11-23 13:07:32,037 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_02
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_02
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:148: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:148: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+
+2023-11-23 13:07:37,330 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_02
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_02
+2023-11-23 13:07:37,331 [INFO] Fitting model
+INFO:mylogger:Fitting model
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+2023-11-23 13:26:44,392 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:26:54,897 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_02
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_02
+2023-11-23 13:26:54,898 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_02
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_02
+2023-11-23 13:27:00,051 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_02
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_02
+2023-11-23 13:27:00,053 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_02
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_02
+2023-11-23 13:27:00,053 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:39:31,903 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:39:33,722 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_02
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_02
+2023-11-23 13:39:33,724 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_02
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_02
+2023-11-23 13:39:38,970 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_02
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_02
+2023-11-23 13:39:38,972 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_02
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_02
+2023-11-23 13:39:38,972 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:52:10,640 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:52:12,459 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_02
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_02
+2023-11-23 13:52:12,460 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_02
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_02
+2023-11-23 13:52:17,780 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_02
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_02
+2023-11-23 13:52:17,782 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_02
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_02
+2023-11-23 13:52:17,782 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:04:49,553 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 14:04:52,274 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_02
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_02
+2023-11-23 14:04:52,275 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_02
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_02
+2023-11-23 14:04:57,564 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_02
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_02
+2023-11-23 14:04:57,566 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_02
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_02
+2023-11-23 14:04:57,566 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:17:33,003 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 14:17:35,011 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_02
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_02
+2023-11-23 14:17:35,012 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_02
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_02
+2023-11-23 14:17:35,013 [INFO] GPU 0 was released by inceptionM, tune_02.
+INFO:mylogger:GPU 0 was released by inceptionM, tune_02.
+2023-11-23 14:17:35,050 [INFO] GPU 0 was taken for inceptionM, tune_03.
+INFO:mylogger:GPU 0 was taken for inceptionM, tune_03.
+2023-11-23 14:17:35,154 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_03
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_03
+2023-11-23 14:17:40,410 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_03
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_03
+2023-11-23 14:17:40,410 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:35:40,532 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 14:35:48,460 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_03
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_03
+2023-11-23 14:35:48,461 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_03
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_03
+2023-11-23 14:35:52,325 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_03
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_03
+2023-11-23 14:35:52,327 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_03
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_03
+2023-11-23 14:35:52,327 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:47:18,893 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:47:20,592 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_03
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_03
+2023-11-23 14:47:20,592 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_03
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_03
+2023-11-23 14:47:24,568 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_03
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_03
+2023-11-23 14:47:24,570 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_03
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_03
+2023-11-23 14:47:24,570 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 15:00:01,826 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 15:00:03,496 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_03
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_03
+2023-11-23 15:00:03,497 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_03
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_03
+2023-11-23 15:00:07,115 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_03
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_03
+2023-11-23 15:00:07,116 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_03
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_03
+2023-11-23 15:00:07,117 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 15:13:42,761 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 15:13:44,389 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_03
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_03
+2023-11-23 15:13:44,390 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_03
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_03
+2023-11-23 15:13:47,894 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_03
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_03
+2023-11-23 15:13:47,896 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_03
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_03
+2023-11-23 15:13:47,896 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 15:28:02,704 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 15:28:04,342 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_03
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_03
+2023-11-23 15:28:04,343 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_03
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_03
+2023-11-23 15:28:04,344 [INFO] GPU 0 was released by inceptionM, tune_03.
+INFO:mylogger:GPU 0 was released by inceptionM, tune_03.
+2023-11-23 15:28:04,843 [INFO] GPU 0 was taken for inceptionM, tune_04.
+INFO:mylogger:GPU 0 was taken for inceptionM, tune_04.
+2023-11-23 15:28:05,484 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_04
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_04
+2023-11-23 15:28:13,843 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_04
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_04
+2023-11-23 15:28:13,843 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 15:57:53,095 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 15:58:05,572 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_04
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_04
+2023-11-23 15:58:05,573 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_04
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_04
+2023-11-23 15:58:11,901 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_04
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_04
+2023-11-23 15:58:11,903 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_04
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_04
+2023-11-23 15:58:11,903 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 16:37:14,187 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 16:37:16,746 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_04
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_04
+2023-11-23 16:37:16,747 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_04
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_04
+2023-11-23 16:37:24,286 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_04
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_04
+2023-11-23 16:37:24,288 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_04
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_04
+2023-11-23 16:37:24,288 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 16:59:10,533 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 16:59:13,067 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_04
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_04
+2023-11-23 16:59:13,069 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_04
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_02, iteration: tune_04
+2023-11-23 16:59:18,932 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_04
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_04
+2023-11-23 16:59:18,934 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_04
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_04
+2023-11-23 16:59:18,934 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 17:26:47,681 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 17:26:51,446 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_04
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_04
+2023-11-23 17:26:51,446 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_04
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_03, iteration: tune_04
+2023-11-23 17:26:57,346 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_04
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_04
+2023-11-23 17:26:57,348 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_04
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_04
+2023-11-23 17:26:57,348 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 17:46:49,900 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 17:46:52,410 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_04
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_04
+2023-11-23 17:46:52,411 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_04
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_04, iteration: tune_04
+2023-11-23 17:46:52,412 [INFO] GPU 0 was released by inceptionM, tune_04.
+INFO:mylogger:GPU 0 was released by inceptionM, tune_04.
+2023-11-23 17:46:52,453 [INFO] GPU 0 was taken for inceptionM, tune_05.
+INFO:mylogger:GPU 0 was taken for inceptionM, tune_05.
+2023-11-23 17:46:52,468 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_05
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_05
+2023-11-23 17:46:59,166 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_05
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_05
+2023-11-23 17:46:59,166 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 18:46:24,705 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 18:46:35,088 [INFO] Fitted model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_05
+INFO:mylogger:Fitted model for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_05
+2023-11-23 18:46:35,089 [INFO] Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_05
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: inceptionM, setup: it_00, iteration: tune_05
+2023-11-23 18:46:39,799 [INFO] Experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_05
+INFO:mylogger:Experiment for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_05
+2023-11-23 18:46:39,801 [INFO] Created model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_05
+INFO:mylogger:Created model for WESAD dataset, classifier: inceptionM, setup: it_01, iteration: tune_05
+2023-11-23 18:46:39,801 [INFO] Fitting model
+INFO:mylogger:Fitting model
+slurmstepd: error: *** JOB 2687229 ON gpub034 CANCELLED AT 2023-11-23T19:07:07 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 2687229.4 ON gpub034 CANCELLED AT 2023-11-23T19:07:07 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

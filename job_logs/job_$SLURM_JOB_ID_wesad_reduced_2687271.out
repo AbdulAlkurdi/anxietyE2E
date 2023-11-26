@@ -1,0 +1,1433 @@
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   3) ucx/1.11.2      5) cuda/11.6.1   7) default
+  2) gcc/11.2.0          4) openmpi/4.1.2   6) modtree/gpu
+
+ 
+
+job is starting on gpub014.delta.ncsa.illinois.edu
+dataset=wesad
+clas=cnnLstmM
+max_eval=10
+CUDA_VISIBLE_DEVICES=0
+ 
+ ******************************
+ ******* i_fold=00 *******
+ ******************************
+ 
+Thu Nov 23 13:09:52 CST 2023
+WARNING:tensorflow:Deprecation warnings have been disabled. Set TF_ENABLE_DEPRECATION_WARNINGS=1 to re-enable them.
+WARNING:root:Limited tf.compat.v2.summary API due to missing TensorBoard installation.
+Using TensorFlow backend.
+2023-11-23 13:09:57,816 [INFO] Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:57,841 [INFO] Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:57,842 [INFO] Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:57,867 [INFO] Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:57,870 [INFO] Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:57,949 [INFO] Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:57,976 [INFO] Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:57,998 [INFO] Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:57,999 [INFO] Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,021 [INFO] Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,022 [INFO] Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,098 [INFO] Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,127 [INFO] Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,148 [INFO] Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,149 [INFO] Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,173 [INFO] Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,173 [INFO] Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,249 [INFO] Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,276 [INFO] Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,299 [INFO] Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,300 [INFO] Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,322 [INFO] Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,323 [INFO] Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,396 [INFO] Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,425 [INFO] Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,448 [INFO] Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 3, 13] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,450 [INFO] Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,471 [INFO] Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [10, 17, 2] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,473 [INFO] Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,547 [INFO] Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 16, 15, 8, 9, 7, 14, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:09:58,576 [INFO] Tuning of cnnLstmM, max_evals: 10
+INFO:mylogger:Tuning of cnnLstmM, max_evals: 10
+ 
+ ******************************
+ ******* i_fold=01 *******
+ ******************************
+ 
+Thu Nov 23 13:09:58 CST 2023
+WARNING:tensorflow:Deprecation warnings have been disabled. Set TF_ENABLE_DEPRECATION_WARNINGS=1 to re-enable them.
+WARNING:root:Limited tf.compat.v2.summary API due to missing TensorBoard installation.
+Using TensorFlow backend.
+2023-11-23 13:10:04,291 [INFO] Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,317 [INFO] Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,318 [INFO] Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,342 [INFO] Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,342 [INFO] Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,414 [INFO] Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,442 [INFO] Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,463 [INFO] Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,464 [INFO] Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,483 [INFO] Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,484 [INFO] Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,556 [INFO] Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,587 [INFO] Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,609 [INFO] Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,610 [INFO] Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,633 [INFO] Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,633 [INFO] Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,704 [INFO] Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,734 [INFO] Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,756 [INFO] Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,756 [INFO] Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,777 [INFO] Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,778 [INFO] Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,849 [INFO] Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,875 [INFO] Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,898 [INFO] Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 8, 7] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,898 [INFO] Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,920 [INFO] Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [13, 16, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,920 [INFO] Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:04,991 [INFO] Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 17, 3, 9, 2, 10, 6, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:10:05,019 [INFO] Tuning of cnnLstmM, max_evals: 10
+INFO:mylogger:Tuning of cnnLstmM, max_evals: 10
+2023-11-23 13:10:05,156 [INFO] GPU 0 was taken for cnnLstmM, tune_07.
+INFO:mylogger:GPU 0 was taken for cnnLstmM, tune_07.
+WARNING:tensorflow:From /projects/bbnp/anxietyE2E/experiment/experiment.py:128: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From /projects/bbnp/anxietyE2E/experiment/experiment.py:128: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2023-11-23 13:10:05,467 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+
+2023-11-23 13:10:07,497 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+2023-11-23 13:10:07,497 [INFO] Fitting model
+INFO:mylogger:Fitting model
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+2023-11-23 13:13:34,492 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:13:37,059 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+2023-11-23 13:13:37,060 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+2023-11-23 13:13:38,054 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+2023-11-23 13:13:38,055 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+2023-11-23 13:13:38,056 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:16:21,729 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:16:22,034 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+2023-11-23 13:16:22,034 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+2023-11-23 13:16:22,968 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+2023-11-23 13:16:22,970 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+2023-11-23 13:16:22,970 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:19:02,494 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:19:02,796 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+2023-11-23 13:19:02,797 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+2023-11-23 13:19:03,714 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+2023-11-23 13:19:03,716 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+2023-11-23 13:19:03,716 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:21:40,477 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:21:40,766 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+2023-11-23 13:21:40,766 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+2023-11-23 13:21:41,680 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+2023-11-23 13:21:41,681 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+2023-11-23 13:21:41,681 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:24:19,149 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:24:19,445 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+2023-11-23 13:24:19,446 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+2023-11-23 13:24:19,447 [INFO] GPU 0 was released by cnnLstmM, tune_07.
+INFO:mylogger:GPU 0 was released by cnnLstmM, tune_07.
+2023-11-23 13:24:19,489 [INFO] GPU 0 was taken for cnnLstmM, tune_08.
+INFO:mylogger:GPU 0 was taken for cnnLstmM, tune_08.
+2023-11-23 13:24:19,504 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+2023-11-23 13:24:20,790 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+2023-11-23 13:24:20,790 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:25:05,218 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:25:07,392 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+2023-11-23 13:25:07,392 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+2023-11-23 13:25:08,282 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+2023-11-23 13:25:08,284 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+2023-11-23 13:25:08,284 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:25:28,183 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:25:28,460 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+2023-11-23 13:25:28,461 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+2023-11-23 13:25:29,355 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+2023-11-23 13:25:29,357 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+2023-11-23 13:25:29,357 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:25:51,262 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:25:51,553 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+2023-11-23 13:25:51,554 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+2023-11-23 13:25:52,471 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+2023-11-23 13:25:52,472 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+2023-11-23 13:25:52,473 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:26:15,233 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:26:15,513 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+2023-11-23 13:26:15,514 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+2023-11-23 13:26:16,414 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+2023-11-23 13:26:16,416 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+2023-11-23 13:26:16,416 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:26:33,663 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:26:33,945 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+2023-11-23 13:26:33,946 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+2023-11-23 13:26:33,946 [INFO] GPU 0 was released by cnnLstmM, tune_08.
+INFO:mylogger:GPU 0 was released by cnnLstmM, tune_08.
+2023-11-23 13:26:33,986 [INFO] GPU 0 was taken for cnnLstmM, tune_09.
+INFO:mylogger:GPU 0 was taken for cnnLstmM, tune_09.
+2023-11-23 13:26:33,999 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 13:26:35,299 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 13:26:35,300 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:27:27,539 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:27:29,683 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 13:27:29,684 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 13:27:30,605 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 13:27:30,606 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 13:27:30,606 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:27:57,482 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:27:57,759 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 13:27:57,760 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 13:27:58,675 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 13:27:58,676 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 13:27:58,676 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:28:27,537 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:28:27,821 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 13:28:27,822 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 13:28:28,747 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 13:28:28,749 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 13:28:28,749 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:28:54,713 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:28:54,996 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 13:28:54,997 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 13:28:55,928 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 13:28:55,930 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 13:28:55,930 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:29:25,919 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 13:29:26,201 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 13:29:26,202 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 13:29:26,203 [INFO] GPU 0 was released by cnnLstmM, tune_09.
+INFO:mylogger:GPU 0 was released by cnnLstmM, tune_09.
+ 
+ ******************************
+ ******* i_fold=02 *******
+ ******************************
+ 
+Thu Nov 23 13:29:28 CST 2023
+WARNING:tensorflow:Deprecation warnings have been disabled. Set TF_ENABLE_DEPRECATION_WARNINGS=1 to re-enable them.
+WARNING:root:Limited tf.compat.v2.summary API due to missing TensorBoard installation.
+Using TensorFlow backend.
+2023-11-23 13:29:32,586 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,620 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,620 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,648 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,649 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,733 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,754 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,778 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,778 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,800 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,800 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,877 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,898 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,920 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,920 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,943 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:32,943 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,020 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,040 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,064 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,064 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,086 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,086 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,159 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,179 [INFO] Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,203 [INFO] Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [16, 9, 14] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,203 [INFO] Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,225 [INFO] Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 4, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,225 [INFO] Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,301 [INFO] Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [5, 15, 3, 8, 2, 10, 13, 7, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 13:29:33,323 [INFO] Tuning of cnnLstmM, max_evals: 10
+INFO:mylogger:Tuning of cnnLstmM, max_evals: 10
+2023-11-23 13:29:33,458 [INFO] GPU 0 was taken for cnnLstmM, tune_05.
+INFO:mylogger:GPU 0 was taken for cnnLstmM, tune_05.
+WARNING:tensorflow:From /projects/bbnp/anxietyE2E/experiment/experiment.py:128: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From /projects/bbnp/anxietyE2E/experiment/experiment.py:128: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2023-11-23 13:29:33,704 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_05
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_05
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+
+2023-11-23 13:29:35,093 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_05
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_05
+2023-11-23 13:29:35,093 [INFO] Fitting model
+INFO:mylogger:Fitting model
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+2023-11-23 13:30:27,422 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:30:29,802 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_05
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_05
+2023-11-23 13:30:29,803 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_05
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_05
+2023-11-23 13:30:30,731 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_05
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_05
+2023-11-23 13:30:30,732 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_05
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_05
+2023-11-23 13:30:30,732 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:30:57,595 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:30:57,884 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_05
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_05
+2023-11-23 13:30:57,884 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_05
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_05
+2023-11-23 13:30:58,840 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_05
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_05
+2023-11-23 13:30:58,842 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_05
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_05
+2023-11-23 13:30:58,842 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:31:27,539 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:31:27,826 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_05
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_05
+2023-11-23 13:31:27,827 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_05
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_05
+2023-11-23 13:31:28,772 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_05
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_05
+2023-11-23 13:31:28,774 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_05
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_05
+2023-11-23 13:31:28,774 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:31:58,464 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:31:58,753 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_05
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_05
+2023-11-23 13:31:58,754 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_05
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_05
+2023-11-23 13:31:59,701 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_05
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_05
+2023-11-23 13:31:59,702 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_05
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_05
+2023-11-23 13:31:59,703 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:32:26,598 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:32:26,898 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_05
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_05
+2023-11-23 13:32:26,898 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_05
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_05
+2023-11-23 13:32:26,899 [INFO] GPU 0 was released by cnnLstmM, tune_05.
+INFO:mylogger:GPU 0 was released by cnnLstmM, tune_05.
+2023-11-23 13:32:26,940 [INFO] GPU 0 was taken for cnnLstmM, tune_06.
+INFO:mylogger:GPU 0 was taken for cnnLstmM, tune_06.
+2023-11-23 13:32:26,954 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_06
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_06
+2023-11-23 13:32:28,296 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_06
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_06
+2023-11-23 13:32:28,297 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:35:22,001 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:35:24,215 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_06
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_06
+2023-11-23 13:35:24,216 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_06
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_06
+2023-11-23 13:35:25,105 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_06
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_06
+2023-11-23 13:35:25,107 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_06
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_06
+2023-11-23 13:35:25,107 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:37:45,090 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:37:45,393 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_06
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_06
+2023-11-23 13:37:45,394 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_06
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_06
+2023-11-23 13:37:46,293 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_06
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_06
+2023-11-23 13:37:46,294 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_06
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_06
+2023-11-23 13:37:46,295 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:40:04,382 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:40:04,686 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_06
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_06
+2023-11-23 13:40:04,687 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_06
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_06
+2023-11-23 13:40:05,573 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_06
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_06
+2023-11-23 13:40:05,574 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_06
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_06
+2023-11-23 13:40:05,574 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:42:23,932 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:42:24,226 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_06
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_06
+2023-11-23 13:42:24,227 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_06
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_06
+2023-11-23 13:42:25,076 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_06
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_06
+2023-11-23 13:42:25,078 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_06
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_06
+2023-11-23 13:42:25,078 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:44:39,016 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:44:39,312 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_06
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_06
+2023-11-23 13:44:39,313 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_06
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_06
+2023-11-23 13:44:39,313 [INFO] GPU 0 was released by cnnLstmM, tune_06.
+INFO:mylogger:GPU 0 was released by cnnLstmM, tune_06.
+2023-11-23 13:44:39,352 [INFO] GPU 0 was taken for cnnLstmM, tune_07.
+INFO:mylogger:GPU 0 was taken for cnnLstmM, tune_07.
+2023-11-23 13:44:39,365 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+2023-11-23 13:44:40,637 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+2023-11-23 13:44:40,637 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:46:16,140 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:46:18,084 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+2023-11-23 13:46:18,085 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+2023-11-23 13:46:18,912 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+2023-11-23 13:46:18,914 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+2023-11-23 13:46:18,914 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:47:34,819 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:47:35,109 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+2023-11-23 13:47:35,110 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+2023-11-23 13:47:35,989 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+2023-11-23 13:47:35,991 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+2023-11-23 13:47:35,991 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:49:10,751 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:49:14,560 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+2023-11-23 13:49:14,561 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+2023-11-23 13:49:17,297 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+2023-11-23 13:49:17,308 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+2023-11-23 13:49:17,308 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:52:47,141 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:52:49,430 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+2023-11-23 13:52:49,431 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+2023-11-23 13:52:52,377 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+2023-11-23 13:52:52,386 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+2023-11-23 13:52:52,395 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 13:56:49,169 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 13:56:52,008 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+2023-11-23 13:56:52,009 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+2023-11-23 13:56:52,033 [INFO] GPU 0 was released by cnnLstmM, tune_07.
+INFO:mylogger:GPU 0 was released by cnnLstmM, tune_07.
+2023-11-23 13:56:52,464 [INFO] GPU 0 was taken for cnnLstmM, tune_08.
+INFO:mylogger:GPU 0 was taken for cnnLstmM, tune_08.
+2023-11-23 13:56:54,758 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+2023-11-23 13:56:59,399 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+2023-11-23 13:56:59,401 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:05:41,291 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 14:05:51,318 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+2023-11-23 14:05:51,320 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+2023-11-23 14:05:54,612 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+2023-11-23 14:05:54,637 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+2023-11-23 14:05:54,671 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:14:57,425 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 14:14:59,011 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+2023-11-23 14:14:59,012 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+2023-11-23 14:15:03,595 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+2023-11-23 14:15:03,619 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+2023-11-23 14:15:03,628 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:22:16,599 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 14:22:18,651 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+2023-11-23 14:22:18,654 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+2023-11-23 14:22:21,599 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+2023-11-23 14:22:21,618 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+2023-11-23 14:22:21,643 [INFO] Fitting model
+INFO:mylogger:Fitting model
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/callbacks.py:92: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.119361). Check your callbacks.
+  warnings.warn(
+
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/callbacks.py:92: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.117554). Check your callbacks.
+  warnings.warn(
+
+2023-11-23 14:30:09,933 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 14:30:13,208 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+2023-11-23 14:30:13,209 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+2023-11-23 14:30:16,850 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+2023-11-23 14:30:16,852 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+2023-11-23 14:30:16,852 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:34:06,229 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 14:34:07,905 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+2023-11-23 14:34:07,906 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+2023-11-23 14:34:07,914 [INFO] GPU 0 was released by cnnLstmM, tune_08.
+INFO:mylogger:GPU 0 was released by cnnLstmM, tune_08.
+2023-11-23 14:34:08,357 [INFO] GPU 0 was taken for cnnLstmM, tune_09.
+INFO:mylogger:GPU 0 was taken for cnnLstmM, tune_09.
+2023-11-23 14:34:11,112 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 14:34:12,998 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 14:34:12,998 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:35:04,732 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:35:06,999 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 14:35:07,000 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 14:35:07,956 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 14:35:07,958 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 14:35:07,958 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:36:02,129 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 14:36:03,798 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 14:36:03,799 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 14:36:07,176 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 14:36:07,178 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 14:36:07,178 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:36:23,323 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+/u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1334: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+2023-11-23 14:36:23,632 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 14:36:23,633 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 14:36:24,635 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 14:36:24,637 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 14:36:24,637 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:36:40,069 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:36:40,362 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 14:36:40,368 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 14:36:41,418 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 14:36:41,420 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 14:36:41,420 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:36:58,975 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:36:59,277 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 14:36:59,277 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 14:36:59,278 [INFO] GPU 0 was released by cnnLstmM, tune_09.
+INFO:mylogger:GPU 0 was released by cnnLstmM, tune_09.
+ 
+ ******************************
+ ******* i_fold=03 *******
+ ******************************
+ 
+Thu Nov 23 14:37:26 CST 2023
+WARNING:tensorflow:Deprecation warnings have been disabled. Set TF_ENABLE_DEPRECATION_WARNINGS=1 to re-enable them.
+WARNING:root:Limited tf.compat.v2.summary API due to missing TensorBoard installation.
+Using TensorFlow backend.
+2023-11-23 14:38:52,889 [INFO] Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:53,189 [INFO] Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:53,189 [INFO] Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:53,472 [INFO] Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:53,472 [INFO] Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,245 [INFO] Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,545 [INFO] Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,571 [INFO] Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,571 [INFO] Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,594 [INFO] Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,595 [INFO] Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,679 [INFO] Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,699 [INFO] Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,723 [INFO] Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,723 [INFO] Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,751 [INFO] Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,751 [INFO] Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,840 [INFO] Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,863 [INFO] Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,888 [INFO] Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,888 [INFO] Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,911 [INFO] Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,911 [INFO] Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:54,996 [INFO] Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:55,018 [INFO] Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:55,042 [INFO] Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [15, 2, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:55,042 [INFO] Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:55,064 [INFO] Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 3, 16] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:55,064 [INFO] Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:55,145 [INFO] Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 5, 17, 8, 10, 13, 7, 14, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:38:55,168 [INFO] Tuning of cnnLstmM, max_evals: 10
+INFO:mylogger:Tuning of cnnLstmM, max_evals: 10
+2023-11-23 14:38:55,442 [INFO] GPU 0 was taken for cnnLstmM, tune_07.
+INFO:mylogger:GPU 0 was taken for cnnLstmM, tune_07.
+WARNING:tensorflow:From /projects/bbnp/anxietyE2E/experiment/experiment.py:128: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From /projects/bbnp/anxietyE2E/experiment/experiment.py:128: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2023-11-23 14:39:11,054 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+
+2023-11-23 14:39:13,636 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+2023-11-23 14:39:13,637 [INFO] Fitting model
+INFO:mylogger:Fitting model
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+2023-11-23 14:42:10,076 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:42:23,205 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+2023-11-23 14:42:23,206 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_07
+2023-11-23 14:42:26,933 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+2023-11-23 14:42:26,954 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+2023-11-23 14:42:26,996 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:43:45,448 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:43:47,864 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+2023-11-23 14:43:47,865 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_07
+2023-11-23 14:43:50,515 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+2023-11-23 14:43:50,538 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+2023-11-23 14:43:50,579 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:45:12,531 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:45:20,986 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+2023-11-23 14:45:20,987 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_07
+2023-11-23 14:45:24,549 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+2023-11-23 14:45:24,572 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+2023-11-23 14:45:24,638 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:47:07,281 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:47:11,117 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+2023-11-23 14:47:11,118 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_07
+2023-11-23 14:47:17,360 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+2023-11-23 14:47:17,391 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+2023-11-23 14:47:17,455 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:48:52,438 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:48:54,505 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+2023-11-23 14:48:54,507 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_07
+2023-11-23 14:48:54,530 [INFO] GPU 0 was released by cnnLstmM, tune_07.
+INFO:mylogger:GPU 0 was released by cnnLstmM, tune_07.
+2023-11-23 14:48:54,919 [INFO] GPU 0 was taken for cnnLstmM, tune_08.
+INFO:mylogger:GPU 0 was taken for cnnLstmM, tune_08.
+2023-11-23 14:48:56,690 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+2023-11-23 14:48:59,260 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+2023-11-23 14:48:59,262 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:50:16,144 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:50:19,221 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+2023-11-23 14:50:19,222 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_08
+2023-11-23 14:50:20,131 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+2023-11-23 14:50:20,132 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+2023-11-23 14:50:20,132 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:50:40,364 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:50:40,650 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+2023-11-23 14:50:40,651 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_08
+2023-11-23 14:50:41,538 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+2023-11-23 14:50:41,540 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+2023-11-23 14:50:41,540 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:51:00,969 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:51:01,275 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+2023-11-23 14:51:01,276 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_08
+2023-11-23 14:51:02,185 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+2023-11-23 14:51:02,186 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+2023-11-23 14:51:02,186 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:51:24,374 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:51:24,656 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+2023-11-23 14:51:24,657 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_08
+2023-11-23 14:51:25,550 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+2023-11-23 14:51:25,551 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+2023-11-23 14:51:25,551 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:51:47,911 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:51:48,341 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+2023-11-23 14:51:48,342 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_08
+2023-11-23 14:51:48,342 [INFO] GPU 0 was released by cnnLstmM, tune_08.
+INFO:mylogger:GPU 0 was released by cnnLstmM, tune_08.
+2023-11-23 14:51:48,678 [INFO] GPU 0 was taken for cnnLstmM, tune_09.
+INFO:mylogger:GPU 0 was taken for cnnLstmM, tune_09.
+2023-11-23 14:51:49,342 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 14:51:51,070 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 14:51:51,070 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:53:32,471 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:53:34,456 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 14:53:34,457 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 14:53:35,304 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 14:53:35,306 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 14:53:35,306 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:54:40,156 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:54:40,450 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 14:54:40,451 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 14:54:41,320 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 14:54:41,321 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 14:54:41,321 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:56:00,694 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:56:00,984 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 14:56:00,985 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 14:56:01,836 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 14:56:01,837 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 14:56:01,837 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:57:19,423 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:57:19,710 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 14:57:19,710 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 14:57:20,552 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 14:57:20,554 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 14:57:20,554 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 14:58:26,141 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 14:58:26,430 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 14:58:26,431 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 14:58:26,431 [INFO] GPU 0 was released by cnnLstmM, tune_09.
+INFO:mylogger:GPU 0 was released by cnnLstmM, tune_09.
+ 
+ ******************************
+ ******* i_fold=04 *******
+ ******************************
+ 
+Thu Nov 23 14:58:39 CST 2023
+WARNING:tensorflow:Deprecation warnings have been disabled. Set TF_ENABLE_DEPRECATION_WARNINGS=1 to re-enable them.
+WARNING:root:Limited tf.compat.v2.summary API due to missing TensorBoard installation.
+Using TensorFlow backend.
+2023-11-23 14:59:30,921 [INFO] Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:31,188 [INFO] Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:31,188 [INFO] Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:31,435 [INFO] Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:31,435 [INFO] Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,080 [INFO] Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,121 [INFO] Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,145 [INFO] Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,145 [INFO] Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,169 [INFO] Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,169 [INFO] Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,244 [INFO] Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,265 [INFO] Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,288 [INFO] Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,288 [INFO] Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,311 [INFO] Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,311 [INFO] Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,384 [INFO] Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,405 [INFO] Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,428 [INFO] Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,428 [INFO] Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,451 [INFO] Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,451 [INFO] Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,524 [INFO] Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,545 [INFO] Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,570 [INFO] Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [17, 10, 11] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,570 [INFO] Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,593 [INFO] Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [9, 16, 5] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,593 [INFO] Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,666 [INFO] Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+INFO:mylogger:Finished loading data for subjects [4, 15, 3, 8, 2, 13, 7, 14, 6] and channels (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+2023-11-23 14:59:32,689 [INFO] Tuning of cnnLstmM, max_evals: 10
+INFO:mylogger:Tuning of cnnLstmM, max_evals: 10
+2023-11-23 14:59:32,798 [INFO] GPU 0 was taken for cnnLstmM, tune_09.
+INFO:mylogger:GPU 0 was taken for cnnLstmM, tune_09.
+WARNING:tensorflow:From /projects/bbnp/anxietyE2E/experiment/experiment.py:128: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From /projects/bbnp/anxietyE2E/experiment/experiment.py:128: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2023-11-23 14:59:38,300 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+
+2023-11-23 14:59:39,666 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 14:59:39,666 [INFO] Fitting model
+INFO:mylogger:Fitting model
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+WARNING:tensorflow:From /u/alkurdi/.conda/envs/TFwesad/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
+
+2023-11-23 15:00:43,308 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 15:00:45,799 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 15:00:45,800 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_00, iteration: tune_09
+2023-11-23 15:00:46,683 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 15:00:46,685 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 15:00:46,685 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 15:01:08,623 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 15:01:08,919 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 15:01:08,920 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_01, iteration: tune_09
+2023-11-23 15:01:09,835 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 15:01:09,837 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 15:01:09,837 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 15:01:29,238 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 15:01:29,532 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 15:01:29,532 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_02, iteration: tune_09
+2023-11-23 15:01:30,452 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 15:01:30,453 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 15:01:30,453 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 15:01:51,550 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 15:01:51,838 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 15:01:51,839 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_03, iteration: tune_09
+2023-11-23 15:01:52,727 [INFO] Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 15:01:52,728 [INFO] Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Created model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 15:01:52,729 [INFO] Fitting model
+INFO:mylogger:Fitting model
+2023-11-23 15:02:13,891 [INFO] Loading weights and predicting
+INFO:mylogger:Loading weights and predicting
+2023-11-23 15:02:14,184 [INFO] Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Fitted model for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 15:02:14,185 [INFO] Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+INFO:mylogger:Finished experiment for WESAD dataset, classifier: cnnLstmM, setup: it_04, iteration: tune_09
+2023-11-23 15:02:14,186 [INFO] GPU 0 was released by cnnLstmM, tune_09.
+INFO:mylogger:GPU 0 was released by cnnLstmM, tune_09.
+Done
+Thu Nov 23 15:02:15 CST 2023

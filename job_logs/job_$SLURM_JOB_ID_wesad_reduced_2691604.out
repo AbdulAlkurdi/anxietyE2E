@@ -1,0 +1,27 @@
+
+Currently Loaded Modules:
+  1) cue-login-env/1.0   7) default           13) libxcrypt/4.4.35
+  2) gcc/11.2.0          8) libmd/1.0.4       14) zlib-ng/2.1.3
+  3) ucx/1.11.2          9) libbsd/0.11.7     15) openssl/3.1.3
+  4) openmpi/4.1.2      10) expat/2.5.0       16) util-linux-uuid/2.38.1
+  5) cuda/11.6.1        11) gettext/0.19.8.1  17) xz/5.2.4
+  6) modtree/gpu        12) libffi/3.4.4      18) python/3.11.6
+
+ 
+
+job is starting on gpua054.delta.ncsa.illinois.edu
+dataset=wesad
+clas=
+max_eval=
+i_fold=
+CUDA_VISIBLE_DEVICES=0
+ 
+ ******************************
+ ******* i_fold= *******
+ ******************************
+ 
+Fri Nov 24 12:40:14 CST 2023
+srun: error: gpua054: task 0: Exited with exit code 8
+slurmstepd: error: execve(): tuning.sh: Exec format error
+Done
+Fri Nov 24 12:40:15 CST 2023
