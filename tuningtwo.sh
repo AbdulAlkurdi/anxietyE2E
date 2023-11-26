@@ -1,5 +1,5 @@
 # This script was created because of probable memory leakage in version of tensorflow/keras used in this project
-for clas in   cnnLstmM mlpLstmM mlpM encoderM  fcnM stresnetM resnetM mcdcnnM cnnM   ; do #inceptionM
+for clas in cnnLstmM mlpLstmM mlpM fcnM mcdcnnM cnnM encoderM resnetM InceptionM stresnetM; do #inceptionM
   for dataset in wesad; do
     for max_eval in $(seq 1 10); do
       for i_fold in 00 01 02 03 04; do
