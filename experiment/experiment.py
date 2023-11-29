@@ -24,7 +24,8 @@ from multimodal_classfiers.stresnet import ClassifierStresnet
 from multimodal_classfiers.time_cnn import ClassifierTimeCnn
 from utils.utils import get_new_session, prepare_data
 warnings.filterwarnings('ignore', category=DeprecationWarning)
-
+# flag to enable automatic mixed precision 
+# os.environ['TF_ENABLE_AUTO_MIXED_PRECISION'] = '1'
 CLASSIFIERS = ("mcdcnnM", "cnnM", "mlpM", "fcnM", "encoderM", "resnetM", "inceptionM", "stresnetM", "mlpLstmM",
                "cnnLstmM")
 

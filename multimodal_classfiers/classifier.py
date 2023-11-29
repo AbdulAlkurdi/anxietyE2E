@@ -4,13 +4,14 @@ from abc import ABC, abstractmethod
 import numpy as np
 from keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
 from keras.optimizers import Adam
-
+import tensorflow as tf
 from multimodal_classfiers.hyperparameters import Hyperparameters
 from utils.loggerwrapper import GLOBAL_LOGGER
 from utils.utils import save_logs
 import warnings
 warnings.filterwarnings("ignore")
-
+# flag to enable automatic mixed precision 
+# os.environ['TF_ENABLE_AUTO_MIXED_PRECISION'] = '1'
 class Classifier(ABC):
     def __init__(self, output_directory, input_shapes, nb_classes, verbose=False, hyperparameters=None,
                  model_init=None):
@@ -42,6 +43,10 @@ class Classifier(ABC):
         self.callbacks.append(early_stopping)
 
     def get_optimizer(self):
+        opt = Adam(lr=self.hyperparameters.lr, decay=self.hyperparameters.decay)
+        opt = tf.train.experimental.enable_mixed_precision_graph_rewrite(opt)
+        
+        #return opt # this section to enable automatic mixed precision training
         return Adam(lr=self.hyperparameters.lr, decay=self.hyperparameters.decay)
 
     def fit(self, x_train, y_train, x_val, y_val, y_true, batch_size=16, nb_epochs=5000, x_test=None, shuffle=True):

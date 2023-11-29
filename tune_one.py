@@ -9,14 +9,12 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import warnings
 warnings.filterwarnings("ignore")
 
+# flag to enable automatic mixed precision 
+# os.environ['TF_ENABLE_AUTO_MIXED_PRECISION'] = '1'
+
+
 
 def get_dataset(name):
-    if name.startswith("amigos_fold_"):
-        return AmigosExperimentNFold(GLOBAL_LOGGER, int(name[-5:-3]), int(name[-2:]))
-    if name.startswith("decaf_fold_"):
-        return DecafExperimentNFold(GLOBAL_LOGGER, int(name[-5:-3]), int(name[-2:]))
-    if name.startswith("ascertain_fold_"):
-        return AscertainExperimentNFold(GLOBAL_LOGGER, int(name[-5:-3]), int(name[-2:]))
     if name.startswith("wesad_fold_"):
         return WesadExperimentNFold(GLOBAL_LOGGER, int(name[-5:-3]), int(name[-2:]))
     raise Exception(f"No such dataset/experiment as {name}")

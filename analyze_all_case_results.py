@@ -1,3 +1,24 @@
+'''
+11/27/2023: outdated in fovor of notebook of the same name.
+This script analyzes the results of a set of experiments conducted on different repositories.
+It reads the experiment results from various directories and generates a master ledger containing the results.
+
+The script performs the following steps:
+1. Imports necessary libraries and modules.
+2. Defines the paths to the result repositories.
+3. Initializes variables and data structures.
+4. Checks if a master ledger file exists. If it does, it loads the existing ledger. Otherwise, it creates a new one.
+5. Iterates over each repository, fold, tune, model, and iteration to read the experiment results.
+6. Processes the experiment results and updates the master ledger.
+7. Saves the master ledger to a pickle file.
+8. Defines a function to process each ledger entry in parallel.
+9. Executes the processing function using a process pool executor.
+10. Collects the results from the processing function.
+11. Calculates the execution time and logs the results.
+12. Concatenates the ledger results into a single dataframe.
+13. Saves the master ledger dataframe to a pickle file.
+'''
+
 import os
 import pandas as pd
 import numpy as np
@@ -58,15 +79,15 @@ else:
                                 metrics = ["precision", "recall", "f1-score", "support"]
                                 with open(in_path+'/predictions.txt') as f:
                                     y_true = [int(x) for x in f.readline().split()]
-                                    if len(aggregated_classification_reports) == 0:
-                                        for clas in set(y_true):
-                                            aggregated_classification_reports[clas] = {"f1-score": [], "precision": [], "recall": [],
-                                                                                        "support": []}
-                                    y_pred = [int(x) for x in f.readline().split()]
-                                    report = classification_report(y_true, y_pred, output_dict=True)
-                                    for clas in aggregated_classification_reports:
-                                        for metric in metrics:
-                                            aggregated_classification_reports[clas][metric].append(report[str(clas)][metric])
+                                if len(aggregated_classification_reports) == 0:
+                                    for clas in set(y_true):
+                                        aggregated_classification_reports[clas] = {"f1-score": [], "precision": [], "recall": [],
+                                                                                    "support": []}
+                                y_pred = [int(x) for x in f.readline().split()]
+                                report = classification_report(y_true, y_pred, output_dict=True)
+                                for clas in aggregated_classification_reports:
+                                    for metric in metrics:
+                                        aggregated_classification_reports[clas][metric].append(report[str(clas)][metric])
                                 result = []
                                 for clas in aggregated_classification_reports:
                                     row = ['WESAD', clas]
@@ -147,3 +168,15 @@ with open('/mnt/d/Users/alkurdi/master_ledger_df.pkl', 'wb') as f:
             pickle.dump(master_ledger_df, f)
             
 
+'''
+
+start = time.time()
+len(master_ledger)
+with Pool() as pool:
+    ledger_results = pool.map(process_each_ledger, master_ledger.keys())
+    #ledger_results = tqdm(pool.imap(process_each_ledger, list(master_ledger.keys())), total=len(master_ledger))
+    print('done')
+
+end = time.time()
+print(end - start)
+'''
