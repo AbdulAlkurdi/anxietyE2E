@@ -73,7 +73,7 @@ class WesadSubject(Subject):
 
     @staticmethod
     def load_subject_data_from_file(path, id):
-        with open("{0}/S{1}/S{1}.pkl".format(path, id), 'rb') as f:
+        with open("{0}/S{1}/organized_S{1}.pkl".format(path, id), 'rb') as f: #changed to organized_S{1}.pkl
             data = pickle.load(f, encoding='latin1')
         return data
 

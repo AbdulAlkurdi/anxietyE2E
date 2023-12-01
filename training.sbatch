@@ -3,7 +3,7 @@
 #SBATCH --mem=16g
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1
-#SBATCH --cpus-per-task=1  
+#SBATCH --cpus-per-task=6  
 #SBATCH --partition=gpuA100x4
 #SBATCH --account=bbnp-delta-gpu
 #SBATCH --job-name=wesad_reduced

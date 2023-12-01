@@ -9,5 +9,3 @@ if __name__ == '__main__':
     config.read("config.ini")
     dataset = Wesad(GLOBAL_LOGGER, config['Paths']['wesad_dir']).get_dataset()
     dataset.save(config['Paths']['mts_out_dir'])
-
- 

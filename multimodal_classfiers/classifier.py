@@ -43,8 +43,8 @@ class Classifier(ABC):
         self.callbacks.append(early_stopping)
 
     def get_optimizer(self):
-        opt = Adam(lr=self.hyperparameters.lr, decay=self.hyperparameters.decay)
-        opt = tf.train.experimental.enable_mixed_precision_graph_rewrite(opt)
+        #opt = Adam(lr=self.hyperparameters.lr, decay=self.hyperparameters.decay)
+        #opt = tf.train.experimental.enable_mixed_precision_graph_rewrite(opt)
         
         #return opt # this section to enable automatic mixed precision training
         return Adam(lr=self.hyperparameters.lr, decay=self.hyperparameters.decay)
