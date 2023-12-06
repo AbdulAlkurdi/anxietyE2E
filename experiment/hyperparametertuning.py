@@ -98,7 +98,7 @@ class HyperparameterTuning():
     def tune_one(self, classifier_name, max_evals):
         self.logger_obj.info(f"Tuning of {classifier_name}, max_evals: {max_evals}")
         try:
-            with FileLock(f"{self.trials_path}/{classifier_name}.lock", timeout=10):
+            with FileLock(f"{self.trials_path}/{classifier_name}.lock", timeout=20):
                 trials = self.load_trials(classifier_name)
                 next_trial_no = len(trials.trials)
                 shutil.rmtree(

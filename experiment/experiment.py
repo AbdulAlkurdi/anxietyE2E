@@ -138,7 +138,7 @@ class Experiment(ABC):
             self.dataset_name, classifier_name, setup.name, iteration)
         self.logger_obj.info(logging_message)
 
-        with FileLock(output_directory + "DOING.lock", timeout=10):
+        with FileLock(output_directory + "DOING.lock", timeout=30):
             done_dict_path = output_directory + "DONE"
             if os.path.exists(done_dict_path):
                 self.logger_obj.info("Experiment already performed")
@@ -158,7 +158,7 @@ class Experiment(ABC):
                 f"Fitted model for {self.dataset_name} dataset, classifier: {classifier_name}, setup: {setup.name}, iteration: {iteration}")
 
             os.makedirs(done_dict_path)
-            #self._clean_up_files(output_directory)
+            self._clean_up_files(output_directory)
             self.logger_obj.info("Finished e" + logging_message[1:])
 
             return classifier.model
