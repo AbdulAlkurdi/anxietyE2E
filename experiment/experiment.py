@@ -99,7 +99,7 @@ class Experiment(ABC):
         self.logger_obj = logger
         self.experimental_setups = None
         self.no_channels = no_channels
-        self.experiment_path = f"results_reduced/{self.dataset_name}{dataset_name_suffix}"
+        self.experiment_path = f"binary_results/{self.dataset_name}{dataset_name_suffix}"
 
         self.prepare_experimental_setups()
 
@@ -173,7 +173,7 @@ class Experiment(ABC):
 def get_experimental_setup(logger_obj, channels_ids, test_ids, train_ids, val_ids, name, dataset_name):
     
     #path = "/projects/bbnp/anxietyE2E/E2Epreprocessed_reduced"
-    path = "/mnt/d/Users/alkurdi/data/E2Epreprocessed"
+    path = "/mnt/d/Users/alkurdi/data/E2Epreprocessed_binary"
     dataset = Dataset(dataset_name, None, logger_obj)
     x_test, y_test, sampling_test = dataset.load(path, test_ids, channels_ids)
     x_val, y_val, sampling_val = dataset.load(path, val_ids, channels_ids)
@@ -214,18 +214,16 @@ def get_ndft(sampling):
 
 def get_batch_size(classifier_name):
     if classifier_name == "inceptionM": #caught inception using 9% of 48gb of A40. A100 has 80gb.
-        return 32 #4 going off 8+x
+        return 2 #4 going off 8+x
     if classifier_name == "resnetM": #caught resnet using 18% of 48gb of A40. A100 has 80gb.
-        return 16 #4 going off 4+x
+        return 4 #4 going off 4+x
     if classifier_name == "encoderM": #caught encoder using 5% of 48gb of A40 gpu. A100 has 80gb. 
-        return 64 #2 going off 35+x
+        return 2 #2 going off 35+x
     if classifier_name == "mlpLstmM":
-        return 64 #16 going off 4+x
+        return 16 #16 going off 4+x
     if classifier_name == "fcnM":
-        return 32 #4 going off 4+x
-    if classifier_name == "cnnM":
-        return 1024
-    return 256 #32 since a40 has 5 times my gpu memory.
+        return 4 #4 going off 4+x
+    return 326 #32 since a40 has 5 times my gpu memory.
 
 
 def n_fold_split(subject_ids, n, seed=5):

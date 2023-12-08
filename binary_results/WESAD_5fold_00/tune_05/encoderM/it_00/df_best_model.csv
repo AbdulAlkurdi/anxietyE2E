@@ -1,0 +1,2 @@
+best_model_train_loss,best_model_val_loss,best_model_train_acc,best_model_val_acc,best_model_learning_rate,best_model_nb_epoch
+0.6464866825031588,0.6314580385231864,0.6746987951807228,0.6832579185520362,0.0,3
