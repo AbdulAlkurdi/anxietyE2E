@@ -1,7 +1,5 @@
 ## Description
 
-This is a supplementary repository for article titled [Can We Ditch Feature Engineering? End-to-End Deep Learning for Affect Recognition from Physiological Sensor Data](https://doi.org/10.3390/s20226535).
-
 ### Preprocessing
 
 Each subject and each signal is pre-processed using: 
@@ -23,7 +21,7 @@ All architectures, except for MCDCNN, were adjusted for multi-source data - sepa
 
 ### Environment preparation
 
-Prepare Anaconda / virtual environment with Python. Install packages from `utils/requirements.txt`.
+Prepare Anaconda / virtual environment with Python. Please read `setup.md`
 
 ### Data preparation
 
@@ -44,6 +42,14 @@ Prepare Anaconda / virtual environment with Python. Install packages from `utils
 
 In order to train models you need to run `.\tuning.sh X` where X is the id of GPU on which you want to run training.
 If you want to gather all results, run `results.py`.
+
+### 
+
+to submit jobs HPC cluster, ssh login, then run a `*.sbatch`. For example, to run `no_loop`:
+
+```
+sbatch no_loop.sbatch
+```
 
 ## Reference
 
