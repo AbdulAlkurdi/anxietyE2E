@@ -29,11 +29,9 @@ warnings.filterwarnings('ignore', category=DeprecationWarning)
 CLASSIFIERS = ("mcdcnnM", "cnnM", "mlpM", "fcnM", "encoderM", "resnetM", "inceptionM", "stresnetM", "mlpLstmM",
                "cnnLstmM")
 
-
 class NoSuchClassifier(Exception):
     def __init__(self, classifier_name):
         self.message = "No such classifier: {}".format(classifier_name)
-
 
 def create_classifier(classifier_name, input_shapes, nb_classes, output_directory, verbose=False,
                       sampling_rates=None, ndft_arr=None, hyperparameters=None, model_init=None):
@@ -73,7 +71,6 @@ def create_classifier(classifier_name, input_shapes, nb_classes, output_director
 
     raise NoSuchClassifier(classifier_name)
 
-
 class ExperimentalSetup():
     def __init__(self, name, x_train, y_train, x_val, y_val, x_test, y_test, input_shapes, sampling_val, ndft_arr,
                  nb_classes, nb_ecpochs_fn, batch_size_fn):
@@ -90,7 +87,6 @@ class ExperimentalSetup():
         self.nb_classes = nb_classes
         self.nb_epochs_fn = nb_ecpochs_fn
         self.batch_size_fn = batch_size_fn
-
 
 class Experiment(ABC):
     def __init__(self, dataset_name: str, logger, no_channels, dataset_name_suffix=""):
@@ -116,7 +112,6 @@ class Experiment(ABC):
         with Graph().as_default():
             session = get_new_session()
             with session.as_default():
-
 
                 with tf.device(f'/device:GPU:{gpu}'):
                     model_init = None
@@ -158,7 +153,7 @@ class Experiment(ABC):
                 f"Fitted model for {self.dataset_name} dataset, classifier: {classifier_name}, setup: {setup.name}, iteration: {iteration}")
 
             os.makedirs(done_dict_path)
-            self._clean_up_files(output_directory)
+            #self._clean_up_files(output_directory)
             self.logger_obj.info("Finished e" + logging_message[1:])
 
             return classifier.model
@@ -214,16 +209,16 @@ def get_ndft(sampling):
 
 def get_batch_size(classifier_name):
     if classifier_name == "inceptionM": #caught inception using 9% of 48gb of A40. A100 has 80gb.
-        return 2 #4 going off 8+x
+        return 32 #4 going off 8+x
     if classifier_name == "resnetM": #caught resnet using 18% of 48gb of A40. A100 has 80gb.
-        return 4 #4 going off 4+x
+        return 32 #4 going off 4+x
     if classifier_name == "encoderM": #caught encoder using 5% of 48gb of A40 gpu. A100 has 80gb. 
-        return 2 #2 going off 35+x
+        return 32 #2 going off 35+x
     if classifier_name == "mlpLstmM":
-        return 16 #16 going off 4+x
+        return 32 #16 going off 4+x
     if classifier_name == "fcnM":
-        return 4 #4 going off 4+x
-    return 326 #32 since a40 has 5 times my gpu memory.
+        return 32 #4 going off 4+x
+    return 128 #32 since a40 has 5 times my gpu memory.
 
 
 def n_fold_split(subject_ids, n, seed=5):
@@ -243,7 +238,6 @@ def n_fold_split(subject_ids, n, seed=5):
 
     random.seed()
     return result
-
 
 def prepare_experimental_setups_n_iterations(self_experiment: Experiment, train_ids, val_ids, test_ids, iterations=5):
     self_experiment.experimental_setups = []

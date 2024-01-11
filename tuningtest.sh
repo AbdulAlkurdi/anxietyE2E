@@ -3,7 +3,7 @@ for clas in fcnM; do
   for dataset in wesad; do
     for max_eval in $(seq 5 8); do
       for i_fold in 00; do
-        echo reprint.py "$0" "$dataset"_fold_05_"$i_fold" $clas "$max_eval"
+        echo "0" "$dataset"_fold_05_"$i_fold" $clas "$max_eval" 
       
       done
     done

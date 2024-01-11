@@ -133,7 +133,7 @@ def save_logs(output_directory, hist, y_pred, y_pred_probabilities, y_true, dura
 
     df_metrics = calculate_metrics(y_true, y_pred, y_pred_probabilities, duration, y_true_val, y_pred_val)
     df_metrics.to_csv(output_directory + 'df_metrics.csv', index=False)
-
+    
     index_best_model = hist_df['val_loss'].idxmin()
     row_best_model = hist_df.loc[index_best_model]
 
@@ -146,6 +146,7 @@ def save_logs(output_directory, hist, y_pred, y_pred_probabilities, y_true, dura
     accuracy_name = 'accuracy' if 'accuracy' in row_best_model else 'acc'
     df_best_model['best_model_train_acc'] = row_best_model[accuracy_name]
     df_best_model['best_model_val_acc'] = row_best_model['val_' + accuracy_name]
+    #df_best_model['best_model_val_f1'] = row_best_model['val_f1'+
     # if lr == True:
     #     df_best_model['best_model_learning_rate'] = row_best_model['lr']
     df_best_model['best_model_nb_epoch'] = index_best_model

@@ -6,7 +6,7 @@ if __name__ == '__main__':
 	max_eval = 10
 	num_iteration = 5
 	dataset_name = 'WESAD'
-	data_dir = "../new_delta_results/results_n_5_snr_0.15"
+	data_dir = "/mnt/d/Users/alkurdi/new_delta_results/results"
 	for classifier in ['fcnM', 'resnetM', 'mcdcnnM',
 					    'cnnM', 'inceptionM', 'encoderM',
 						'mlpM', 'mlpLstmM', 'cnnLstmM']: #, 'stresnetM'
